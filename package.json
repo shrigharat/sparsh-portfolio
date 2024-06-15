@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/styles.css -o dist/styles.css",
+    "build": "postcss css/styles.css -o styles.css",
     "watch": "chokidar 'dist/**/*.html' -c 'npm run build'"
   },
   "keywords": [],
