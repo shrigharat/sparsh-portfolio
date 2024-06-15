@@ -1,7 +1,7 @@
-const FATHER_EMAIL = 'santoshpatil@gmail.com';
-const MOTHER_EMAIL = 'pallavipatil@gmail.com';
-const FATHER_PHONE = '+91 99292992929';
-const MOTHER_PHONE = '+91 8228282828';
+const FATHER_EMAIL = 'Santosh1976patil@gmail.com';
+const MOTHER_EMAIL = 'Pallu8283patil@gmail.com';
+const FATHER_PHONE = '+91 8652860101';
+const MOTHER_PHONE = '+91 8087760007';
 
 const RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35]
 
@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
   attachCopyToClipboardHandlers();
   attachHamburgerHandler();
   const data = {
-    labels: ['Feb 2023', 'Apr 2023', 'Jun 2023', 'Aug 2023', 'Oct 2023', 'Dec 2023', 'Feb 2024', 'Apr 2024', 'May 2024'],
+    labels: ['Feb \'23', 'Apr \'23', 'Jun \'23', 'Aug \'23', 'Oct \'23', 'Dec \'23', 'Feb \'24', 'Apr \'24', 'May \'24'],
     datasets: [{
       label: 'AITA Ranking',
       borderColor: '#00B1CA',
@@ -116,7 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
             },
             title: {
               display: true,
-              text: 'Sparsh\'s AITA Ranking in the past year',
+              text: 'Sparsh\'s AITA (ALL INDIA TENNIS ASSOCIATION) Ranking in the past year',
               font: {
                 family: 'DM Sans', // Custom font for x-axis title
                 size: 14,
