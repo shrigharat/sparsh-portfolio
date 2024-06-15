@@ -1,0 +1,83 @@
+html{
+  scroll-behavior: smooth;
+}
+
+.achievement-card{
+  overflow: hidden;
+}
+
+a{
+  scroll-behavior: smooth;
+}
+
+/* .achievement-card .details .more-details {
+  display: grid;
+  opacity: 0;
+  grid-template-rows: 0;
+  transition: grid-template-rows .2s ease, opacity .2s ease;
+  overflow: hidden;
+} */
+
+.achievement-card img{
+  transition: transform 5s ease;
+}
+
+.achievement-card:hover img{
+  transform: scale(1.1);
+}
+
+.polka-pattern{
+  /* opacity: 0.8; */
+  background-image: radial-gradient(#00B1CA 0.5px, #fff 0.5px);
+  background-size: 10px 10px;
+}
+
+.polka-pattern-dark{
+  /* opacity: 0.8; */
+  background-image: radial-gradient(#00B1CA 1px, transparent 0.5px);
+  background-size: 20px 20px;
+}
+
+#nav-header.open{
+  /* width: 100%; */
+  width: 100%;
+  max-width: calc(100% - 2rem);
+  /* height: calc(100% - 2rem); */
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 .25rem 1rem 0.25rem rgba(112, 144, 176, 0.25);
+}
+
+#nav-header.open nav{
+  width: 100%;
+  display: flex;
+}
+
+#nav-header.open nav ul{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 16px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#nav-header.open nav ul li a {
+  text-decoration: underline;
+  color: black !important;
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* .achievement-card:hover .details .more-details{
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.achievement-card:hover .details .more-details p{
+  margin: 0;
+  display: inline;
+} */
