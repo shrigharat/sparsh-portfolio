@@ -4,6 +4,11 @@ html{
 
 :root{
   --primary: #00B1CA;
+  --primary-soft: #F1FAFC;
+  --primary-softer: #F9FDFE;
+
+  --on-primary: #003D47;
+  --on-primary-variant: #007F95;
 }
 
 .achievement-card{

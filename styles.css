@@ -783,6 +783,9 @@ video {
 .fill-black {
   fill: #000;
 }
+.fill-primary {
+  fill: var(--primary);
+}
 .fill-white {
   fill: #fff;
 }
@@ -902,9 +905,8 @@ video {
 .tracking-widest {
   letter-spacing: 0.1em;
 }
-.text-\[\#00B1CA\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 177 202 / var(--tw-text-opacity));
+.text-primary {
+  color: var(--primary);
 }
 .text-white {
   --tw-text-opacity: 1;
