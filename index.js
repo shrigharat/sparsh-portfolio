@@ -3,7 +3,8 @@ const MOTHER_EMAIL = 'Pallu8283patil@gmail.com';
 const FATHER_PHONE = '+91 8652860101';
 const MOTHER_PHONE = '+91 8087760007';
 
-const RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35]
+const UNDER_12_RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35];
+const UNDER_14_RANKING_DATA = [330, 342, 181, 245, 217];
 
 const attachCopyToClipboardHandlers = () => {
   const fatherEmailButton = document.getElementById('copy-father-email');
@@ -85,101 +86,168 @@ const animateBannerText = () => {
   )
 }
 
+const rankingU12GraphNode = document.getElementById('ranking-graph-u12');
+const rankingU14GraphNode = document.getElementById('ranking-graph-u14');
+const renderUnder12RankingGraph = () => {
+  var options = {
+    series: [
+      {
+        name: "Under 12",
+        data: UNDER_12_RANKING_DATA
+      }
+    ],
+    chart: {
+    height: 400,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    }
+    },
+    colors: ['#00B1CA'],
+    dataLabels: {
+      enabled: true,
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    title: {
+      text: 'Average High & Low Temperature',
+      align: 'left'
+    },
+    grid: {
+      borderColor: '#98DEED',
+      row: {
+        colors: ['#F1FAFC', 'transparent'], // takes an array which will be repeated on columns
+        opacity: 0.5
+      },
+    },
+    markers: {
+      size: 1
+    },
+    xaxis: {
+      categories: ["Feb '23", "Apr '23", "Jun '23", "Aug '23", "Oct '23", "Dec '23", "Feb '24", "Apr '24", "May '24"],
+      title: {
+        text: 'Month'
+      }
+    },
+    yaxis: {
+      title: {
+        text: 'Ranking'
+      },
+      reversed: true,
+      min: 1,
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'right',
+      floating: true,
+      offsetY: -25,
+      offsetX: -5
+    }
+  };
+
+  rankingU12GraphNode.innerHTML = '';
+  var chart = new ApexCharts(rankingU12GraphNode, options);
+  chart.render();
+}
+
+const renderUnder14RankingGraph = () => {
+  var options = {
+    series: [
+      {
+        name: "Under 14",
+        data: UNDER_14_RANKING_DATA
+      }
+    ],
+    chart: {
+    height: 400,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    }
+    },
+    colors: ['#00B1CA'],
+    dataLabels: {
+      enabled: true,
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    title: {
+      text: 'Average High & Low Temperature',
+      align: 'left'
+    },
+    grid: {
+      borderColor: '#98DEED',
+      row: {
+        colors: ['#F1FAFC', 'transparent'], // takes an array which will be repeated on columns
+        opacity: 0.5
+      },
+    },
+    markers: {
+      size: 1
+    },
+    xaxis: {
+      categories: ["Nov '24", "Dec '24", "Jan '25", "Feb '25", "Mar '25"],
+      title: {
+        text: 'Month'
+      }
+    },
+    yaxis: {
+      title: {
+        text: 'Ranking'
+      },
+      reversed: true,
+      min: 1,
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'right',
+      floating: true,
+      offsetY: -25,
+      offsetX: -5
+    }
+  };
+
+  rankingU14GraphNode.innerHTML = '';
+  var chart = new ApexCharts(rankingU14GraphNode, options);
+  chart.render();
+}
+
+const attachRankingGraphHandlers = () => {
+  const under12Button = document.getElementById('under-12');
+  const under14Button = document.getElementById('under-14');
+
+  under12Button.addEventListener('click', () => {
+    rankingU12GraphNode.classList.toggle('hidden');
+    rankingU14GraphNode.classList.toggle('hidden');
+    renderUnder12RankingGraph();
+    under12Button.classList.toggle('active-ranking-graph-button');
+    under14Button.classList.toggle('active-ranking-graph-button');
+  });
+
+  under14Button.addEventListener('click', () => {
+    rankingU12GraphNode.classList.toggle('hidden');
+    rankingU14GraphNode.classList.toggle('hidden');
+    renderUnder14RankingGraph();
+    under12Button.classList.toggle('active-ranking-graph-button');
+    under14Button.classList.toggle('active-ranking-graph-button');
+  });
+}
+
 animateBannerText();
 window.addEventListener('DOMContentLoaded', () => {
   attachCopyToClipboardHandlers();
+  
   attachHamburgerHandler();
-  const data = {
-    labels: ['Feb \'23', 'Apr \'23', 'Jun \'23', 'Aug \'23', 'Oct \'23', 'Dec \'23', 'Feb \'24', 'Apr \'24', 'May \'24'],
-    datasets: [{
-      label: 'AITA Ranking',
-      borderColor: '#00B1CA',
-      data: RANKING_DATA
-    }]
-  }
-  new Chart(
-    document.getElementById('ranking-graph'),
-    {
-      type: 'line',
-      options: {
-        animation: false,
-        layout: {
-          padding: {
-            top: 20,
-            left: 20
-          }
-        },
-        scales: {
-          x: {
-            grid: {
-              display: false
-            },
-            title: {
-              display: true,
-              text: 'Sparsh\'s AITA (ALL INDIA TENNIS ASSOCIATION) Ranking in the past year',
-              font: {
-                family: 'DM Sans', // Custom font for x-axis title
-                size: 14,
-                weight: 'bold',
-              },
-              color: '#00B1CA', // Optional: Custom color for x-axis title
-            },
-            ticks: {
-              font: {
-                family: 'DM Sans', // Custom font for y-axis labels
-                size: 12
-              },
-              color: '#00B1CA', // Optional: Custom color for y-axis labels
-            },
-          },
-          y: {
-            display: false,
-            grid: {
-              display: false
-            },
-            ticks: {
-              font: {
-                family: 'DM Sans', // Custom font for y-axis labels
-              },
-              color: '#00B1CA', // Optional: Custom color for y-axis labels
-            },
-            reverse: true,
-            beginAtZero: true
-          },
-        },
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            bodyFont: {
-              family: 'DM Sans', // Custom font for tooltip
-            },
-            titleFont: {
-              family: 'DM Sans', // Custom font for tooltip title
-            },
-            footerFont: {
-              family: 'DM Sans', // Custom font for tooltip footer
-            }
-          },
-          datalabels: {
-            align: 'top',
-            anchor: 'end',
-            formatter: function (value, context) {
-              return RANKING_DATA[context.dataIndex];
-            },
-            font: {
-              family: 'DM Sans', // Custom font for data labels
-              size: 10,
-              // weight: 'bold',
-            },
-            color: '#000' // Optional: Custom color for data labels
-          }
-        }
-      },
-      data,
-      plugins: [ChartDataLabels]
-    }
-  );
 
+  attachRankingGraphHandlers();
+
+  renderUnder12RankingGraph();
 })

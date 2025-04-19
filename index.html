@@ -32,11 +32,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://unpkg.com/split-type"></script>
-
   <title>Sparsh Patil</title>
 </head>
 <body>
-  <header class="max-w-[40%] border border-gray-900 md:border-white bg-white md:bg-transparent md:backdrop-blur fixed z-20 md:z-0 md:absolute top-4 right-4 md:top-8 md:right-8" id="nav-header">
+  <header class="max-w-[40%] border border-gray-900 md:border-white/50 bg-white md:bg-transparent md:backdrop-blur fixed z-20 md:z-0 md:absolute top-4 right-4 md:top-8 md:right-8" id="nav-header">
     <nav class="hidden md:block">
       <ul class="flex justify-between px-6 py-4 gap-12 text-white">
         <li><a href="#achievements">Achievements</a></li>
@@ -55,6 +54,7 @@
     </span>
   </header>
   <main>
+    <!-- Hero Banner -->
     <section id="hero-banner" class="flex-col-reverse flex md:flex-row h-screen">
       <div class="p-4 py-8 left flex-1 md:px-16 md:pt-12 flex flex-col justify-start">
         <div class="hidden md:flex social gap-2 mb-48">
@@ -93,6 +93,7 @@
       </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="flex flex-col-reverse md:flex-row pt-12 px-4 md:p-none min-h-screen md:h-screen bg-[#00B1CA]/10 items-end gap-8 md:gap-16 relative">
       <div class="left flex-1 h-[20px] md:h-[100%] w-full flex justify-center md:justify-end z-10">
         <img src="/assets/sparsh-profile-alternate.png" class="w-auto h-full">
@@ -127,12 +128,62 @@
       </div>
     </section>
 
+    <!-- Achievements -->
     <section id="achievements" class="flex flex-col min-h-screen md:h-screen px-4 py-12 md:p-12 w-full justify-center items-center gap-6 polka-pattern">
       <h2 class="font-heading underline font-bold text-3xl text-center w-[90%]">Achievements</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 grid-rows-custom-6 md:grid-rows-2 gap-2 md:gap-1 h-[80%] w-full md:w-[90%]">
 
+        <!-- Under 14 AITA National Championship CS7 -->
+        <article class="achievement-card row-span-2 relative p-2 flex cursor-pointer">
+          <div class="w-full h-full absolute top-0 left-0">
+            <img 
+              src="/assets/achievements/under-14-aita-cs7-winner.jpeg" 
+              alt="Sparsh receiving trophy for winning the National School Games held in Madhya Pradesh" 
+              class="object-cover w-full h-full"
+            >
+          </div>
+          <div class="details border border-white/50 flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 pb-12 font-body mt-auto w-full gap-2 md:gap-0">
+            <div class="flex justify-between w-full">
+              <div class="flex flex-col">
+                <h4 class="text-white font-semibold text-2xl">Singles, Winner 🥇</h4>
+              </div>
+              <div class="more-details text-xs text-white pt-1">
+                4<sup>th</sup> April, 2025
+              </div>
+            </div>
+            <p class="text-white text-lg">
+              Under 14
+              <br>
+              AITA National Championship CS7
+            </p>
+          </div>
+        </article>
+
+        <!-- National school games, Madhya Pradesh 2024 -->
+        <article class="achievement-card relative p-2 flex cursor-pointer h-[250px] md:h-full">
+          <div class="w-full h-full absolute top-0 left-0">
+            <img 
+              src="/assets/achievements/national-school-games-mp-winner.jpeg" 
+              alt="Sparsh receiving trophy for winning the National School Games held in Madhya Pradesh" 
+              class="object-cover w-full h-full"
+            >
+          </div>
+          <div class="details border border-white/50 flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
+            <div class="flex justify-between w-full">
+              <div class="flex flex-col">
+                <h4 class="text-white font-semibold">Singles, Winner 🥇</h4>
+                <h4 class="text-white font-semibold">Team Event, Winner 🥇</h4>
+              </div>
+              <div class="more-details text-xs text-white pt-1">
+                20<sup>-24th</sup> Dec, 2024
+              </div>
+            </div>
+            <p class="text-white text-sm">National school games, Madhya Pradesh 2024</p>
+          </div>
+        </article>
+
         <!-- Bombay Gymkhana, 10th May 2024 -->
-        <article class="achievement-card row-span-2 relative p-2 flex cursor-pointer hover:col-span-[1.2]">
+        <article class="achievement-card relative p-2 flex cursor-pointer">
           <div class="w-full h-full absolute top-0 left-0">
             <img 
               src="/assets/achievements/bombay_gymkhana_winner.jpg" 
@@ -140,7 +191,7 @@
               class="object-cover w-full h-full"
             >
           </div>
-          <div class="details border border-white flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
+          <div class="details border border-white/50 flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
             <div class="flex justify-between w-full">
               <div class="flex flex-col">
                 <h4 class="text-white font-semibold">Singles, Winner 🥇</h4>
@@ -163,7 +214,7 @@
               class="object-cover w-full h-full"
             >
           </div>
-          <div class="details border border-white flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
+          <div class="details border border-white/50 flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
             <div class="flex justify-between w-full">
               <div class="flex flex-col">
                 <h4 class="text-white font-semibold">Doubles, Runner up 🥈</h4>
@@ -190,7 +241,7 @@
               class="object-fit w-full h-full block md:hidden"
             >
           </div>
-          <div class="details border border-white flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-1 md:gap-0">
+          <div class="details border border-white/50 flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-1 md:gap-0">
             <div class="flex justify-between w-full">
               <div class="flex flex-col">
                 <h4 class="text-white font-semibold">Doubles, Winner 🥇</h4>
@@ -203,68 +254,18 @@
             
           </div>
         </article>
-
-        <!-- TPL ASA under 12 & 16 -->
-        <article class="achievement-card relative p-2 flex cursor-pointer">
-          <div class="w-full h-full absolute top-0 left-0">
-            <img 
-              src="/assets/achievements/kalina_doubles_winner.jpeg" 
-              alt="Sparsh showing his trophy for 1st place in the doubles category and 2nd place in singles in the under 12 group at the Mumbai University Championship Series (CS7) - Kalina" 
-              class="object-cover w-full h-full"
-            >
-          </div>
-          <div class="details border border-white flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
-            <div class="flex justify-between w-full">
-              <div class="flex flex-col">
-                <h4 class="text-white font-semibold">Doubles, Winner 🥇</h4>
-                <h4 class="text-white font-semibold">Singles, Runner up 🥈</h4>
-              </div>
-              <div class="more-details text-xs text-white pt-1">
-                12<sup>th</sup> Apr, 2024
-              </div>
-            </div>
-            <p class="text-white text-sm">Under 12 Mumbai University Championship Series (CS7) - Kalina</p>
-          </div>
-        </article>
-
-        <!-- National selection, Satara -->
-        <article class="achievement-card relative p-2 flex cursor-pointer h-[250px] md:h-full">
-          <div class="w-full h-full absolute top-0 left-0">
-            <img 
-              src="/assets/achievements/mumbai_soft_tennis_national_selections.jpg" 
-              alt="Sparsh receiving the trophy for winner in the doubles category, runner up in the singles cateogry and runner up in the team events category at the Under 15 Mumbai Soft Tennis National Selection - Satara" 
-              class="hidden lg:block object-cover w-full h-full"
-            >
-            <img 
-              src="/assets/achievements/mumbai_soft_tennis_national_selections_mobile.jpeg" 
-              alt="Sparsh receiving the trophy for winner in the doubles category, runner up in the singles cateogry and runner up in the team events category at the Under 15 Mumbai Soft Tennis National Selection - Satara"
-              class="block lg:hidden object-cover w-full h-full"
-            >
-          </div>
-          <div class="details border border-white flex flex-col justify-start items-start z-10 backdrop-blur-md p-2 font-body mt-auto w-full gap-2 md:gap-0">
-            <div class="flex justify-between w-full">
-              <div class="flex flex-col">
-                <h4 class="text-white font-semibold">Doubles, Winner 🥇</h4>
-                <h4 class="text-white font-semibold">Singles, Runner up 🥉</h4>
-                <h4 class="text-white font-semibold">Team Events, Runner up 🥈</h4>
-              </div>
-              <div class="more-details text-xs text-white pt-1">
-                18<sup>th</sup> Dec, 2023
-              </div>
-            </div>
-            <p class="text-white text-sm">Under 15 Mumbai Soft Tennis National Selection - Satara</p>
-          </div>
-        </article>
       </div>
+      <a href="/achievements.html" class="border border-primary px-5 py-3 bg-white hover:bg-primary hover:text-white transition-colors">View All Achievements</a>
     </section>
 
+    <!-- Analysis -->
     <section id="record" class="flex flex-col justify-start items-center py-12 gap-4 min-h-screen md:h-screen">
       <h2 class="font-heading underline text-3xl font-bold text-center">Sparsh's Past 2 years on the court</h2>
       <div class="flex flex-col md:flex-row justify-center items-center w-[90%] h-[80%] py-4 gap-8">
         <div class="left flex-1 h-full">
           <div class="grid grid-cols-2 grid-rows-3 gap-2 w-full h-full">
             <div class="text-center w-full h-full flex flex-col justify-center text-[#00B1CA] bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div class="count text-5xl font-bold font-heading z-10 text-left">12</div>
+              <div class="count text-5xl font-bold font-heading z-10 text-left">15</div>
               <div class="text text-lg font-semibold z-10 text-left">Tournaments participated</div>
               <svg viewBox="0 0 512 512" xml:space="preserve" fill="#fff" class="absolute bottom-2 -right-4 md:right-1 w-48 h-48 z-0 fill-[#fff]/40">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -278,7 +279,7 @@
               </svg>
             </div>
             <div class="text-center w-full h-full flex flex-col justify-center text-[#00B1CA] bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div class="count text-5xl font-bold font-heading z-10 text-left">8</div>
+              <div class="count text-5xl font-bold font-heading z-10 text-left">11</div>
               <div class="text text-lg font-semibold z-10 text-left">Winner Trophies</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="absolute bottom-2 -right-8 md:right-1 w-48 h-48 z-0 fill-[#fff]/40">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4.99612C11 4.59166 10.7564 4.22702 10.3827 4.07224C10.009 3.91746 9.57889 4.00302 9.29289 4.28902L8.29289 5.28902C7.90237 5.67954 7.90237 6.31271 8.29289 6.70323C8.48816 6.89849 8.74408 6.99612 9 6.99612V9.99612C8.44772 9.99612 8 10.4438 8 10.9961C8 11.5484 8.44772 11.9961 9 11.9961H9.9986C9.99907 11.9961 9.99953 11.9961 10 11.9961C10.0005 11.9961 10.0009 11.9961 10.0014 11.9961H11C11.5523 11.9961 12 11.5484 12 10.9961C12 10.4438 11.5523 9.99612 11 9.99612V4.99612Z" fill="white" fill-opacity="0.4"/>
@@ -364,16 +365,35 @@
             </div>
           </div>
         </div>
-        <div class="right flex-1 w-full h-full flex items-end">
-          <canvas id="ranking-graph" class="w-full h-[250px] md:h-[400px]"></canvas>
+        <div class="right flex-1 w-full h-full flex flex-col justify-center items-center">
+          <div id="ranking-graph-u12" class="w-full h-[250px] md:h-[400px]"></div>
+          <div id="ranking-graph-u14" class="w-full h-[250px] md:h-[400px] hidden"></div>
+          <div class="flex gap-4">
+            <button id="under-12" class="border border-primary px-3 py-2 hover:bg-primary hover:text-white transition-colors active-ranking-graph-button">Under 12</button>
+            <button id="under-14" class="border border-primary px-3 py-2 hover:bg-primary hover:text-white transition-colors">Under 14</button>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- News coverage -->
     <section id="news" class="flex flex-col min-h-screen md:h-screen px-4 py-12 md:p-12 w-full justify-center items-center gap-6 bg-[#00B1CA]/10 relative polka-pattern-dark">
       <!-- <div class="absolute w-full h-full top-0 left-0 polka-pattern-dark z-0"></div> -->
       <h2 class="font-heading underline text-3xl font-bold text-center z-10">Recent news</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 grid-rows-1 h-[80%] w-full md:w-[80%] mx-auto z-10">
+        <article class="news-card  w-full h-[350px] md:h-[450px] border-2 border-black shadow-lg bg-white">
+          <div class="img-container w-full h-[62%] md:h-[70%] border-b-2 border-black">
+            <img 
+              src="/assets/national-school-games-news-peice.jpeg" 
+              alt="MSLTA article which mentioned Sparsh Patil" 
+              class="w-full h-full object-fit"
+            >
+          </div>
+          <div class="details font-body p-2">
+            <h4 class="font-semibold">News article about Sparsh, after winning National School Games held in Madhya Pradesh</h4>
+            <p class="text-[13px] md:text-[14px] mt-2">Sparsh Patil was the winner in both individual and team events</p>
+          </div>
+        </article>
         <article class="news-card  w-full h-[350px] md:h-[450px] border-2 border-black shadow-lg bg-white">
           <div class="img-container w-full h-[62%] md:h-[70%] border-b-2 border-black">
             <img 
@@ -400,22 +420,10 @@
             <p class="text-[13px] md:text-[14px] mt-2">Sparsh recently reached the Semi-finals of MSLTA NMSA National series 2024 in both the singles and doubles category.</p>
           </div>
         </article>
-        <article class="news-card  w-full h-[350px] md:h-[450px] border-2 border-black shadow-lg bg-white">
-          <div class="img-container w-full h-[62%] md:h-[70%] border-b-2 border-black">
-            <img 
-              src="/assets/mslta_sparsh_bt_kempegowda_manjunath.png" 
-              alt="MSLTA article which mentioned Sparsh Patil" 
-              class="w-full h-full object-fit"
-            >
-          </div>
-          <div class="details font-body p-2">
-            <h4 class="font-semibold">Six seeds upset at 18th Ramesh Desai Memorial Under 12 Tennis Championship</h4>
-            <p class="text-[13px] md:text-[14px] mt-2">Sparsh Patil (MH) bt Kempegowda Manjunath (KA)6-3, 6-2</p>
-          </div>
-        </article>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="flex flex-col h-[80vh] md:h-[60vh] px-4 py-12 md:p-12 w-full justify-center items-center gap-6">
       <h2 class="font-heading underline font-bold text-3xl text-center w-full">Contact</h2>
       <div class="parents-contact w-full max-w-[1000px] font-body">
@@ -522,8 +530,7 @@
     </div>
   </footer>
 
-  <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js "></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script type="module" src="/index.js"></script>
 </body>
 </html>

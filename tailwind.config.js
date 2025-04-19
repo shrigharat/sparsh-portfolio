@@ -12,6 +12,11 @@ module.exports = {
         heading: ['Epilogue', 'sans-serif'], // H1, H2, H3
         body: ['DM Sans', 'sans-serif'], // Paragraph, Span, Div
       },
+      colors: {
+        primary: {
+          DEFAULT: 'var(--primary)'
+        }
+      }
     }
   },
   variants: {

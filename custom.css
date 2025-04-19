@@ -2,6 +2,10 @@ html{
   scroll-behavior: smooth;
 }
 
+:root{
+  --primary: #00B1CA;
+}
+
 .achievement-card{
   overflow: hidden;
 }
@@ -70,6 +74,11 @@ a{
 
 .no-scroll {
   overflow: hidden;
+}
+
+.active-ranking-graph-button{
+  background-color: var(--primary);
+  color: white;
 }
 
 /* .achievement-card:hover .details .more-details{
