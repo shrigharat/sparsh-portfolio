@@ -92,50 +92,60 @@ const renderUnder12RankingGraph = () => {
   var options = {
     series: [
       {
-        name: "Under 12",
-        data: UNDER_12_RANKING_DATA
-      }
+        name: 'Under 12',
+        data: UNDER_12_RANKING_DATA,
+      },
     ],
     chart: {
-    height: 400,
-    type: 'line',
-    zoom: {
-      enabled: false
-    },
-    toolbar: {
-      show: false
-    }
+      height: 400,
+      type: 'line',
+      zoom: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
     },
     colors: ['#00B1CA'],
     dataLabels: {
       enabled: true,
     },
     stroke: {
-      curve: 'smooth'
+      curve: 'smooth',
     },
     title: {
-      text: 'Average High & Low Temperature',
-      align: 'left'
+      text: 'Under 12 AITA Rankings',
+      align: 'left',
     },
     grid: {
       borderColor: '#98DEED',
       row: {
         colors: ['#F1FAFC', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
+        opacity: 0.5,
       },
     },
     markers: {
-      size: 1
+      size: 1,
     },
     xaxis: {
-      categories: ["Feb '23", "Apr '23", "Jun '23", "Aug '23", "Oct '23", "Dec '23", "Feb '24", "Apr '24", "May '24"],
+      categories: [
+        "Feb '23",
+        "Apr '23",
+        "Jun '23",
+        "Aug '23",
+        "Oct '23",
+        "Dec '23",
+        "Feb '24",
+        "Apr '24",
+        "May '24",
+      ],
       title: {
-        text: 'Month'
-      }
+        text: 'Month',
+      },
     },
     yaxis: {
       title: {
-        text: 'Ranking'
+        text: 'Ranking',
       },
       reversed: true,
       min: 1,
@@ -145,63 +155,63 @@ const renderUnder12RankingGraph = () => {
       horizontalAlign: 'right',
       floating: true,
       offsetY: -25,
-      offsetX: -5
-    }
+      offsetX: -5,
+    },
   };
 
   rankingU12GraphNode.innerHTML = '';
   var chart = new ApexCharts(rankingU12GraphNode, options);
   chart.render();
-}
+};
 
 const renderUnder14RankingGraph = () => {
   var options = {
     series: [
       {
-        name: "Under 14",
-        data: UNDER_14_RANKING_DATA
-      }
+        name: 'Under 14',
+        data: UNDER_14_RANKING_DATA,
+      },
     ],
     chart: {
-    height: 400,
-    type: 'line',
-    zoom: {
-      enabled: false
-    },
-    toolbar: {
-      show: false
-    }
+      height: 400,
+      type: 'line',
+      zoom: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
     },
     colors: ['#00B1CA'],
     dataLabels: {
       enabled: true,
     },
     stroke: {
-      curve: 'smooth'
+      curve: 'smooth',
     },
     title: {
-      text: 'Average High & Low Temperature',
-      align: 'left'
+      text: 'Under 14 AITA Rankings',
+      align: 'left',
     },
     grid: {
       borderColor: '#98DEED',
       row: {
         colors: ['#F1FAFC', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
+        opacity: 0.5,
       },
     },
     markers: {
-      size: 1
+      size: 1,
     },
     xaxis: {
       categories: ["Nov '24", "Dec '24", "Jan '25", "Feb '25", "Mar '25"],
       title: {
-        text: 'Month'
-      }
+        text: 'Month',
+      },
     },
     yaxis: {
       title: {
-        text: 'Ranking'
+        text: 'Ranking',
       },
       reversed: true,
       min: 1,
@@ -211,14 +221,14 @@ const renderUnder14RankingGraph = () => {
       horizontalAlign: 'right',
       floating: true,
       offsetY: -25,
-      offsetX: -5
-    }
+      offsetX: -5,
+    },
   };
 
   rankingU14GraphNode.innerHTML = '';
   var chart = new ApexCharts(rankingU14GraphNode, options);
   chart.render();
-}
+};
 
 const attachRankingGraphHandlers = () => {
   const under12Button = document.getElementById('under-12');
