@@ -4,7 +4,7 @@ const FATHER_PHONE = '+91 8652860101';
 const MOTHER_PHONE = '+91 8087760007';
 
 const UNDER_12_RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35];
-const UNDER_14_RANKING_DATA = [330, 342, 181, 245, 217];
+const UNDER_14_RANKING_DATA = [330, 342, 181, 245, 217, 152, 114];
 
 const attachCopyToClipboardHandlers = () => {
   const fatherEmailButton = document.getElementById('copy-father-email');
