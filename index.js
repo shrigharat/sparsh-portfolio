@@ -3,8 +3,10 @@ const MOTHER_EMAIL = 'Pallu8283patil@gmail.com';
 const FATHER_PHONE = '+91 8652860101';
 const MOTHER_PHONE = '+91 8087760007';
 
-const UNDER_12_RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35];
-const UNDER_14_RANKING_DATA = [330, 342, 181, 245, 217, 152, 114];
+const UNDER_12_RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35, 35, 35];
+const UNDER_14_RANKING_DATA = [
+  330, 342, 181, 245, 217, 152, 114, 105, 117, 103, 78, 71, 46, 39, 14,
+];
 
 const attachCopyToClipboardHandlers = () => {
   const fatherEmailButton = document.getElementById('copy-father-email');
@@ -14,17 +16,17 @@ const attachCopyToClipboardHandlers = () => {
 
   fatherEmailButton.addEventListener('click', (e) => {
     navigator.clipboard.writeText(FATHER_EMAIL);
-  })
+  });
   motherEmailButton.addEventListener('click', (e) => {
     navigator.clipboard.writeText(MOTHER_EMAIL);
-  })
+  });
   fatherPhoneButton.addEventListener('click', (e) => {
     navigator.clipboard.writeText(FATHER_PHONE);
-  })
+  });
   motherPhoneButton.addEventListener('click', (e) => {
     navigator.clipboard.writeText(MOTHER_PHONE);
-  })
-}
+  });
+};
 
 const attachHamburgerHandler = () => {
   const hamburgerButton = document.getElementById('hamburger-menu');
@@ -32,8 +34,8 @@ const attachHamburgerHandler = () => {
   hamburgerButton.addEventListener('click', () => {
     headerElement.classList.toggle('open');
     document.body.classList.toggle('no-scroll');
-  })
-}
+  });
+};
 
 const animateBannerText = () => {
   const text = new SplitType('#banner-title', { types: 'chars' });
@@ -44,7 +46,7 @@ const animateBannerText = () => {
     characters,
     {
       y: 100,
-      opacity: 0
+      opacity: 0,
     },
     {
       y: 0,
@@ -52,8 +54,8 @@ const animateBannerText = () => {
       stagger: 0.05,
       duration: 2,
       ease: 'power4.out',
-    }
-  )
+    },
+  );
   gsap.fromTo(
     bannerDescription,
     {
@@ -66,9 +68,9 @@ const animateBannerText = () => {
       stagger: 0.05,
       duration: 2,
       ease: 'power4.out',
-      delay: 0.5
-    }
-  )
+      delay: 0.5,
+    },
+  );
   gsap.fromTo(
     bannerCTA,
     {
@@ -81,13 +83,14 @@ const animateBannerText = () => {
       stagger: 0.05,
       duration: 2,
       ease: 'power4.out',
-      delay: 0.8
-    }
-  )
-}
+      delay: 0.8,
+    },
+  );
+};
 
 const rankingU12GraphNode = document.getElementById('ranking-graph-u12');
 const rankingU14GraphNode = document.getElementById('ranking-graph-u14');
+
 const renderUnder12RankingGraph = () => {
   var options = {
     series: [
@@ -138,6 +141,8 @@ const renderUnder12RankingGraph = () => {
         "Feb '24",
         "Apr '24",
         "May '24",
+        "Jun '24",
+        "Jul '24",
       ],
       title: {
         text: 'Month',
@@ -204,7 +209,23 @@ const renderUnder14RankingGraph = () => {
       size: 1,
     },
     xaxis: {
-      categories: ["Nov '24", "Dec '24", "Jan '25", "Feb '25", "Mar '25"],
+      categories: [
+        "Nov '24",
+        "Dec '24",
+        "Jan '25",
+        "Feb '25",
+        "Mar '25",
+        "Apr '25",
+        "May '25",
+        "Jun '25",
+        "Jul '25",
+        "Aug '25",
+        "Sep '25",
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+      ],
       title: {
         text: 'Month',
       },
@@ -249,15 +270,15 @@ const attachRankingGraphHandlers = () => {
     under12Button.classList.toggle('active-ranking-graph-button');
     under14Button.classList.toggle('active-ranking-graph-button');
   });
-}
+};
 
 animateBannerText();
 window.addEventListener('DOMContentLoaded', () => {
   attachCopyToClipboardHandlers();
-  
+
   attachHamburgerHandler();
 
   attachRankingGraphHandlers();
 
-  renderUnder12RankingGraph();
-})
+  renderUnder14RankingGraph();
+});
