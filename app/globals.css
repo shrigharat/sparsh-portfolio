@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #00b1ca;
+  --primary-soft: #f1fafc;
+  --primary-softer: #f9fdfe;
+
+  --on-primary: #003d47;
+  --on-primary-variant: #007f95;
+}
+
+.achievement-card {
+  overflow: hidden;
+}
+
+a {
+  scroll-behavior: smooth;
+}
+
+.achievement-card img {
+  transition: transform 5s ease;
+}
+
+.achievement-card:hover img {
+  transform: scale(1.1);
+}
+
+.polka-pattern {
+  background-image: radial-gradient(#00b1ca 0.5px, #fff 0.5px);
+  background-size: 10px 10px;
+}
+
+.polka-pattern-dark {
+  background-image: radial-gradient(#00b1ca 1px, transparent 0.5px);
+  background-size: 20px 20px;
+}
+
+#nav-header.open {
+  width: 100%;
+  max-width: calc(100% - 2rem);
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 0.25rem 1rem 0.25rem rgba(112, 144, 176, 0.25);
+}
+
+#nav-header.open nav {
+  width: 100%;
+  display: flex;
+}
+
+#nav-header.open nav ul {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 16px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#nav-header.open nav ul li a {
+  text-decoration: underline;
+  color: black !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.active-ranking-graph-button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.min-h-\[600px\] {
+  min-height: 600px;
+}
+
+@media screen and (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
