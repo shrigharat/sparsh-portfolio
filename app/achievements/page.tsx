@@ -6,21 +6,21 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Sparsh Patil | Achievements',
   description:
-    'Sparsh Santosh Patil, a 11-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
   keywords: 'Sparsh Patil,Tennis,Young talent,Panvel',
   authors: [{ name: 'Sparsh Patil' }],
   openGraph: {
     title: 'Sparsh Patil | Rising tennis talent',
     url: 'https://sparshpatil.com/',
     description:
-      'Sparsh Santosh Patil, a 11-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
     images: [{ url: 'https://sparshpatil.com/assets/sparsh-profile-meta.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sparsh Patil | Rising tennis talent',
     description:
-      'Sparsh Santosh Patil, a 11-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
     images: ['https://sparshpatil.com/assets/sparsh-profile-meta.jpeg'],
   },
 };

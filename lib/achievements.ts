@@ -18,6 +18,14 @@ export const data: Achievement[] = [
     isLarge: true,
   },
   {
+    image:
+      '/assets/achievements/woodridge_highschool_all_india_championship_series_under_16_doubles_winner.webp',
+    alt: 'Sparsh receiving trophy for winning doubles and runner up in singles at the MSLTA Woodridge High School All India Championship Series Under 16',
+    results: ['Doubles, Winner 🥇', 'Singles, Runner up 🥈'],
+    date: '19th Feb, 2026',
+    description: 'Under 16\nMSLTA Woodridge High School All India Championship Series',
+  },
+  {
     image: '/assets/achievements/nagpur-ns-december-26.webp',
     alt: 'Sparsh receiving trophy at NS Nagpur 2025',
     results: ['Doubles, Runner-up 🥈'],

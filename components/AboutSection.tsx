@@ -19,7 +19,7 @@ export default function AboutSection() {
         <h2 className="font-heading underline font-bold text-3xl">About Sparsh</h2>
         <p className="font-body w-[90%] md:w-max-[500px] flex flex-col justify-start gap-3">
           <span>
-            Sparsh Santosh Patil, a 11-year-old rising tennis talent from Navi Mumbai, is making a
+            Sparsh Santosh Patil, a 13-year-old rising tennis talent from Navi Mumbai, is making a
             splash with his impressive skills and energetic playing style. Known for his
             never-giving-up spirit and love for the game, Sparsh has quickly become a formidable
             presence on the court. His athleticism and ability to adjust set him apart, letting him

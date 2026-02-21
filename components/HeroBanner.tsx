@@ -21,21 +21,21 @@ export default function HeroBanner() {
       if (characters) {
         gsap.fromTo(
           characters,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, stagger: 0.05, duration: 2, ease: 'power4.out' },
+          { y: 60, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.03, duration: 0.8, ease: 'power4.out' },
         );
       }
 
       gsap.fromTo(
         descriptionRef.current,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.05, duration: 2, ease: 'power4.out', delay: 0.5 },
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: 'power4.out', delay: 0.3 },
       );
 
       gsap.fromTo(
         ctaRef.current,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.05, duration: 2, ease: 'power4.out', delay: 0.8 },
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: 'power4.out', delay: 0.5 },
       );
     };
 
