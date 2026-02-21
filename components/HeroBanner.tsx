@@ -63,17 +63,14 @@ export default function HeroBanner() {
           </a>
         </div>
         <div className="pitch-text flex flex-col gap-4 md:gap-8">
-          <h1
-            ref={titleRef}
-            className="text-3xl md:text-6xl font-semibold font-heading"
-          >
+          <h1 ref={titleRef} className="text-3xl md:text-6xl font-semibold font-heading">
             Sparsh Patil
           </h1>
           <p
             ref={descriptionRef}
             className="font-body text-md md:text-xl w-full md:w-[60%] max-w-[400px]"
           >
-            Witness the rise of a future <u>tennis star</u>. At just 11 years of age, he brings
+            Witness the rise of a future <u>tennis star</u>. At just 13 years of age, he brings
             unparalleled energy, skill, and focus to every match, ready to dominate the court and
             achieve his ambition of being the best.
           </p>
