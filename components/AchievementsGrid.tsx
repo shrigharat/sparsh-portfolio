@@ -19,7 +19,7 @@ export default function AchievementsGrid() {
           return (
             <article
               key={index}
-              className={`achievement-card relative p-2 flex cursor-pointer ${isLarge ? 'row-span-2 !h-[300px] md:!h-full' : ''}`}
+              className={`achievement-card relative p-2 flex cursor-pointer ${isLarge ? 'row-span-2' : ''}`}
             >
               <div className="w-full h-full absolute top-0 left-0">
                 <Image
@@ -37,7 +37,7 @@ export default function AchievementsGrid() {
                     {achievement.results.map((result, i) => (
                       <h4
                         key={i}
-                        className={`text-white font-semibold ${isLarge ? 'text-2xl' : ''}`}
+                        className={`text-white font-semibold ${isLarge ? 'md:text-2xl' : ''}`}
                       >
                         {result}
                       </h4>
@@ -45,7 +45,7 @@ export default function AchievementsGrid() {
                   </div>
                   <div className="more-details text-xs text-white pt-1">{achievement.date}</div>
                 </div>
-                <p className={`text-white ${isLarge ? 'text-lg' : 'text-sm'}`}>
+                <p className={`text-white text-sm ${isLarge ? 'md:text-lg' : ''}`}>
                   {achievement.description.split('\n').map((line, i, arr) => (
                     <span key={i}>
                       {line}

@@ -6,10 +6,10 @@ export default function AboutSection() {
       id="about"
       className="flex flex-col-reverse md:flex-row pt-12 px-4 md:p-none min-h-screen md:h-screen bg-[#00B1CA]/10 items-end gap-8 md:gap-16 relative"
     >
-      <div className="left flex-1 h-[20px] md:h-[100%] w-full flex justify-center md:justify-end z-10">
+      <div className="left flex-1 md:h-[100%] w-full flex justify-center md:justify-end z-10">
         <Image
           src="/assets/sparsh-profile-alternate.png"
-          className="w-auto h-full"
+          className="w-auto h-[400px] md:h-full "
           alt="Sparsh Patil"
           width={600}
           height={800}
@@ -26,12 +26,13 @@ export default function AboutSection() {
             shine in different matches and against various opponents.
           </span>
           <span>
-            Sparsh has been playing and practicing Tennis since the past 3 years, at the{' '}
+            Sparsh has been playing and practicing Tennis since the past 5 years, at the{' '}
             <u>ASA Tennis Academy</u>. Guided by respected coaches and his parents, Sparsh has
-            perfected his skills, consistently showing amazing technique and smart playing.
-            Sparsh&apos;s journey is filled with many tournament wins and awards, proving his
-            potential as a future tennis star. Off the court, sparsh is a cheerful kid who has a
-            hunger to learn, experiment and explore.
+            perfected his skills, consistently showing amazing technique and smart playing. Sparsh
+            currently holds an AITA <strong>#14</strong> ranking in the Under 14 category as of
+            January 2026. Sparsh&apos;s journey is filled with many tournament wins and awards,
+            proving his potential as a future tennis star. Off the court, sparsh is a cheerful kid
+            who has a hunger to learn, experiment and explore.
           </span>
           <span>
             With each match, he keeps pushing his limits, showing the true spirit of a champion and
