@@ -16,7 +16,7 @@ export default function RecordSection() {
           <div className="grid grid-cols-2 grid-rows-3 gap-2 w-full h-full">
             {/* Tournaments */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">35</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">36</div>
               <div className="text text-lg font-semibold z-10 text-left">
                 Tournaments participated
               </div>
@@ -80,13 +80,13 @@ export default function RecordSection() {
 
             {/* Bronze medals */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">3</div>
+              <div className="count text-5xl font-bold font-heading text-left z-10">4</div>
               <div className="text text-lg font-semibold text-left z-10">Bronze medals</div>
             </div>
 
             {/* Semifinalist */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">10</div>
+              <div className="count text-5xl font-bold font-heading text-left z-10">11</div>
               <div className="text text-lg font-semibold text-left z-10">Times Semifinalist</div>
             </div>
 
