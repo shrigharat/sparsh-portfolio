@@ -11,11 +11,19 @@ export type Achievement = {
 export const data: Achievement[] = [
   {
     image: '/assets/achievements/asian-under-14-March-2026.webp',
-    alt: 'Sparsh receiving trophy for winning the MSLTA Masters held in Chatrapati Sambhaji Nagar',
+    alt: 'Sparsh receiving certificate for 3rd place in the Bal Bhavan Asian U-14 Tennis Tournament',
     results: ['Singles, 3rd Place 🥉'],
     date: '21-27th March, 2026',
     description: 'Under 14\nBal Bhavan Asian U-14 Tennis Tournament',
     isLarge: true,
+  },
+  {
+    image: '/assets/achievements/asian-jaipur-3rd-place-april-2026.webp',
+    alt: 'Sparsh receiving certificate for 3rd place in the Asian Jaipur U-14 Tennis Tournament',
+    results: ['Singles, 3rd Place 🥉'],
+    date: '5th-9th April, 2026',
+    description: 'Under 14\nAsian Jaipur U-14 Tennis Tournament',
+    isLarge: false,
   },
   {
     image: '/assets/achievements/chatrapati-sambhaji-nagar-mslta-dec-25.webp',
