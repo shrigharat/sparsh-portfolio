@@ -9,14 +9,14 @@ export default function RecordSection() {
       className="flex flex-col justify-start items-center py-12 gap-4 min-h-screen md:h-screen"
     >
       <h2 className="font-heading underline text-3xl font-bold text-center w-[90%]">
-        Sparsh&apos;s Past 2 years on the court
+        Sparsh&apos;s Past 3 years on the court
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center w-[90%] h-[80%] py-4 gap-8">
         <div className="left flex-1 h-full">
           <div className="grid grid-cols-2 grid-rows-3 gap-2 w-full h-full">
             {/* Tournaments */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">37</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">38</div>
               <div className="text text-lg font-semibold z-10 text-left">
                 Tournaments participated
               </div>
@@ -53,7 +53,7 @@ export default function RecordSection() {
 
             {/* Winner Trophies */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">11</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">12</div>
               <div className="text text-lg font-semibold z-10 text-left">Winner Trophies</div>
               <svg
                 width="20"
@@ -74,7 +74,7 @@ export default function RecordSection() {
 
             {/* Runner up trophies */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">10</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">11</div>
               <div className="text text-lg font-semibold z-10 text-left">Runner up trophies</div>
             </div>
 
