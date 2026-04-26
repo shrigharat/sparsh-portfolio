@@ -10,7 +10,7 @@ export type Achievement = {
 
 export const data: Achievement[] = [
   {
-    image: '/assets/achievements/asian-gurgaon-april-2026.jpeg',
+    image: '/assets/achievements/asian-gurgaon-april-2026.webp',
     alt: 'Sparsh receiving trophy for winning the Asian Gurgaon U-14 Tennis Tournament',
     results: ['Doubles, Winner 🥇', 'Singles, 2nd Place 🥈'],
     date: '13-18th April, 2026',
