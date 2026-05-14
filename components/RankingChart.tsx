@@ -120,14 +120,14 @@ export default function RankingChart() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full">
+    <div className="flex flex-col justify-center items-center w-full h-full gap-4">
       <div
         ref={u12Ref}
-        className={`w-full h-[250px] md:h-[400px] ${activeGraph === 'u12' ? '' : 'hidden'}`}
+        className={`w-full h-[250px] md:h-[340px] ${activeGraph === 'u12' ? '' : 'hidden'}`}
       />
       <div
         ref={u14Ref}
-        className={`w-full h-[250px] md:h-[400px] ${activeGraph === 'u14' ? '' : 'hidden'}`}
+        className={`w-full h-[250px] md:h-[340px] ${activeGraph === 'u14' ? '' : 'hidden'}`}
       />
       <div className="flex gap-4">
         <button

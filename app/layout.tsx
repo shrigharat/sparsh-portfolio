@@ -16,23 +16,34 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Sparsh Patil',
+  title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
   authors: [{ name: 'Sparsh Patil' }],
   description:
-    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
-  keywords: ['Sparsh Patil', 'Tennis', 'Young talent', 'Panvel'],
+    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
+  keywords: [
+    'Sparsh Patil',
+    'Tennis',
+    'Young talent',
+    'Panvel',
+    'AITA',
+    'ATF',
+    'Under 14',
+    'ranking',
+    'Navi Mumbai',
+    'junior tennis India',
+  ],
   openGraph: {
-    title: 'Sparsh Patil | Rising tennis talent',
+    title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
     url: 'https://sparshpatil.com/',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
     images: [{ url: 'https://sparshpatil.com/assets/sparsh-banner-meta.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sparsh Patil | Rising tennis talent',
+    title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
     images: ['https://sparshpatil.com/assets/sparsh-banner-meta.webp'],
   },
   robots: 'index',

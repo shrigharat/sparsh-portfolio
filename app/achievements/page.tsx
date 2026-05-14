@@ -5,23 +5,23 @@ import Footer from '@/components/Footer';
 import { data } from '@/lib/achievements';
 
 export const metadata: Metadata = {
-  title: 'Sparsh Patil | Achievements',
+  title: 'Sparsh Patil | Achievements — AITA #7 & ATF #34',
   description:
-    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
-  keywords: 'Sparsh Patil,Tennis,Young talent,Panvel',
+    'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #34 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
+  keywords: 'Sparsh Patil,Tennis,Young talent,Panvel,AITA,ATF,Under 14,ranking,junior tennis India',
   authors: [{ name: 'Sparsh Patil' }],
   openGraph: {
-    title: 'Sparsh Patil | Rising tennis talent',
-    url: 'https://sparshpatil.com/',
+    title: 'Sparsh Patil | Achievements — AITA #7 & ATF #34',
+    url: 'https://sparshpatil.com/achievements/',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #34 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
     images: [{ url: 'https://sparshpatil.com/assets/sparsh-profile-meta.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sparsh Patil | Rising tennis talent',
+    title: 'Sparsh Patil | Achievements — AITA #7 & ATF #34',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Panvel taluka within the Raigad district, is making a splash with his impressive skills and energetic playing style.',
+      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #34 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
     images: ['https://sparshpatil.com/assets/sparsh-profile-meta.jpeg'],
   },
 };

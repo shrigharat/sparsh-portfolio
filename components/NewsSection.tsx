@@ -9,8 +9,11 @@ export default function NewsSection() {
     >
       <h2 className="font-heading underline text-3xl font-bold text-center z-10">Recent news</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 grid-rows-1 h-[80%] w-full md:w-[80%] mx-auto z-10">
-        {data.map((item) => (
-          <article className="news-card w-full h-[350px] md:h-[450px] border-2 border-black shadow-lg bg-white">
+        {data.map((item, index) => (
+          <article
+            className="news-card w-full h-[350px] md:h-[450px] border-2 border-black shadow-lg bg-white"
+            key={index}
+          >
             <div className="img-container w-full h-[62%] md:h-[70%] border-b-2 border-black relative">
               <Image src={item.image} alt={item.title} className="w-full h-full object-fit" fill />
             </div>

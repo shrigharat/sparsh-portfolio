@@ -29,10 +29,10 @@ export default function AboutSection() {
             Sparsh has been playing and practicing Tennis since the past 5 years, at the{' '}
             <u>ASA Tennis Academy</u>. Guided by respected coaches and his parents, Sparsh has
             perfected his skills, consistently showing amazing technique and smart playing. Sparsh
-            currently holds an AITA <strong>#7</strong> ranking in the Under 14 category as of
-            April 2026. Sparsh&apos;s journey is filled with many tournament wins and awards,
-            proving his potential as a future tennis star. Off the court, sparsh is a cheerful kid
-            who has a hunger to learn, experiment and explore.
+            currently holds an AITA <strong>#7</strong> ranking in the Under 14 category and an ATF{' '}
+            <strong>#34</strong> ranking as of May 2026. Sparsh&apos;s journey is filled with many
+            tournament wins and awards, proving his potential as a future tennis star. Off the
+            court, sparsh is a cheerful kid who has a hunger to learn, experiment and explore.
           </span>
           <span>
             With each match, he keeps pushing his limits, showing the true spirit of a champion and

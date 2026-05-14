@@ -10,12 +10,19 @@ export type Achievement = {
 
 export const data: Achievement[] = [
   {
+    image: '/assets/achievements/winner-matunga-cs7-may-26.webp',
+    alt: 'Sparsh receiving trophy for winning the singles and doubles categories at Matunga Gymkhana U-16 Tennis Tournament',
+    results: ['Singles, Winner 🥇', 'Doubles, Winner 🥇'],
+    date: '2-6th May, 2026',
+    description: 'Under 16\nCS7 Matunga Gymkhana Tennis Tournament',
+    isLarge: true,
+  },
+  {
     image: '/assets/achievements/asian-gurgaon-april-2026.webp',
     alt: 'Sparsh receiving trophy for winning the Asian Gurgaon U-14 Tennis Tournament',
     results: ['Doubles, Winner 🥇', 'Singles, 2nd Place 🥈'],
     date: '13-18th April, 2026',
     description: 'Under 14\nAsian Gurgaon U-14 Tennis Tournament',
-    isLarge: true,
   },
   {
     image: '/assets/achievements/asian-under-14-March-2026.webp',
@@ -23,7 +30,6 @@ export const data: Achievement[] = [
     results: ['Singles, 3rd Place 🥉'],
     date: '21-27th March, 2026',
     description: 'Under 14\nBal Bhavan Asian U-14 Tennis Tournament',
-    isLarge: false,
   },
   {
     image: '/assets/achievements/asian-jaipur-3rd-place-april-2026.webp',
@@ -31,7 +37,6 @@ export const data: Achievement[] = [
     results: ['Singles, 3rd Place 🥉'],
     date: '5th-9th April, 2026',
     description: 'Under 14\nAsian Jaipur U-14 Tennis Tournament',
-    isLarge: false,
   },
   {
     image: '/assets/achievements/chatrapati-sambhaji-nagar-mslta-dec-25.webp',
