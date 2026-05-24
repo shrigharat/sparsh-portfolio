@@ -17,7 +17,7 @@ export default function RecordSection() {
             {/* AITA Ranking */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
               <div className="count text-5xl font-bold font-heading text-left z-10">#7</div>
-              <div className="text text-lg font-semibold text-left z-10">AITA Under 14 <span className="text-sm font-normal text-gray-400">(Apr 2026)</span></div>
+              <div className="text text-lg font-semibold text-left z-10">AITA Under 14 <span className="text-sm font-normal text-gray-400">(May 2026)</span></div>
             </div>
 
             {/* ATF Ranking */}
@@ -27,7 +27,7 @@ export default function RecordSection() {
             </div>
             {/* Tournaments */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">39</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">40</div>
               <div className="text text-lg font-semibold z-10 text-left">
                 Tournaments participated
               </div>
@@ -64,7 +64,7 @@ export default function RecordSection() {
 
             {/* Winner Trophies */}
             <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">14</div>
+              <div className="count text-5xl font-bold font-heading z-10 text-left">16</div>
               <div className="text text-lg font-semibold z-10 text-left">Winner Trophies</div>
               <svg
                 width="20"

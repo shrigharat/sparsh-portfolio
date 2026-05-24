@@ -5,7 +5,7 @@ import type ApexCharts from 'apexcharts';
 import type { ApexOptions } from 'apexcharts';
 
 const UNDER_12_RANKING_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35, 35, 35];
-const UNDER_14_RANKING_DATA = [330, 181, 217, 114, 117, 78, 46, 14, 11, 7];
+const UNDER_14_RANKING_DATA = [330, 181, 217, 114, 117, 78, 46, 14, 11, 7, 7];
 
 const under12Options: ApexOptions = {
   series: [{ name: 'Under 12', data: UNDER_12_RANKING_DATA }],
@@ -73,6 +73,7 @@ const under14Options: ApexOptions = {
       "Jan '26",
       "Feb '26",
       "Apr '26",
+      "May '26",
     ],
     title: { text: 'Month' },
   },

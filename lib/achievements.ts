@@ -10,12 +10,19 @@ export type Achievement = {
 
 export const data: Achievement[] = [
   {
+    image: '/assets/achievements/winner-ns-belagavi-may-2026.webp',
+    alt: 'Sparsh receiving trophy for winning the singles and doubles categories at NS Belagavi U-14 Tennis Tournament',
+    results: ['Singles, Winner 🥇', 'Doubles, Winner 🥇'],
+    date: '18th May, 2026',
+    description: 'Under 14\nNS Belagavi, Karnataka Tennis Tournament',
+    isLarge: true,
+  },
+  {
     image: '/assets/achievements/winner-matunga-cs7-may-26.webp',
     alt: 'Sparsh receiving trophy for winning the singles and doubles categories at Matunga Gymkhana U-16 Tennis Tournament',
     results: ['Singles, Winner 🥇', 'Doubles, Winner 🥇'],
     date: '2-6th May, 2026',
     description: 'Under 16\nCS7 Matunga Gymkhana Tennis Tournament',
-    isLarge: true,
   },
   {
     image: '/assets/achievements/asian-gurgaon-april-2026.webp',
