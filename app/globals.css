@@ -81,6 +81,38 @@ a {
   min-height: 600px;
 }
 
+/* Ball rises with ease-out (fast launch, slow at peak), falls with ease-in (gravity) */
+@keyframes ball-translate {
+  0%   { transform: translateY(0);                        animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); }
+  50%  { transform: translateY(var(--ball-rise, -130px)); animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0); }
+  100% { transform: translateY(0); }
+}
+
+/* Mobile: smaller rise */
+@media (max-width: 767px) {
+  :root { --ball-rise: -70px; }
+  .tennis-ball-svg { width: 34px; height: 34px; }
+}
+
+/* Squish only at impact — instant flatten, quick recover */
+@keyframes ball-squish {
+  0%   { transform: scaleX(1.35) scaleY(0.65); animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); }
+  12%  { transform: scaleX(1)    scaleY(1);    animation-timing-function: linear; }
+  88%  { transform: scaleX(1)    scaleY(1);    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0); }
+  100% { transform: scaleX(1.35) scaleY(0.65); }
+}
+
+/* Shadow grows/darkens when ball is near the floor */
+@keyframes ball-shadow {
+  0%   { transform: translateX(-50%) scaleX(1.6); opacity: 0.35; animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); }
+  50%  { transform: translateX(-50%) scaleX(0.4); opacity: 0.08; animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0); }
+  100% { transform: translateX(-50%) scaleX(1.6); opacity: 0.35; }
+}
+
+.ball-translate { animation: ball-translate 1.15s infinite; }
+.ball-squish    { transform-origin: center bottom; animation: ball-squish 1.15s infinite; }
+.ball-shadow-anim { animation: ball-shadow 1.15s infinite; }
+
 @media screen and (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
