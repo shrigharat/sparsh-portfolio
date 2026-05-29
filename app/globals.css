@@ -113,6 +113,14 @@ a {
 .ball-squish    { transform-origin: center bottom; animation: ball-squish 1.15s infinite; }
 .ball-shadow-anim { animation: ball-shadow 1.15s infinite; }
 
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track { animation: ticker-scroll 22s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+
 @media screen and (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);

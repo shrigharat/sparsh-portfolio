@@ -1,112 +1,106 @@
-'use client';
+import CopyButton from './CopyButton';
 
 const FATHER_EMAIL = 'Santosh1976patil@gmail.com';
 const MOTHER_EMAIL = 'Pallu8283patil@gmail.com';
 const FATHER_PHONE = '+91 8652860101';
 const MOTHER_PHONE = '+91 8087760007';
 
-const CopyIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" className="fill-primary">
-    <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+const PhoneIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" className="fill-current opacity-50 flex-shrink-0">
+    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
   </svg>
 );
+
+const EmailIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" className="fill-current opacity-50 flex-shrink-0">
+    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+  </svg>
+);
+
+interface ContactCardProps {
+  name: string;
+  relation: string;
+  phone: string;
+  email: string;
+  phoneHref: string;
+}
+
+function ContactCard({ name, relation, phone, email, phoneHref }: ContactCardProps) {
+  return (
+    <div
+      className="flex-1 bg-white border border-gray-100 hover:border-[#00b1ca]/50 transition-colors overflow-hidden"
+      style={{ borderTop: '3px solid #00b1ca' }}
+    >
+      <div className="px-5 pt-5 pb-4 border-b border-gray-100">
+        <p className="font-body text-[10px] tracking-[0.25em] uppercase text-[#00b1ca] font-semibold mb-1">
+          {relation}
+        </p>
+        <h3 className="font-heading font-bold text-[#003d47] text-lg">{name}</h3>
+      </div>
+
+      <div className="px-5 py-4 flex flex-col gap-3">
+        <div className="flex items-center gap-3 text-[#003d47]">
+          <PhoneIcon />
+          <a href={`tel:${phoneHref}`} className="font-body text-[13px] flex-1 hover:text-[#00b1ca] transition-colors">
+            {phone}
+          </a>
+          <CopyButton text={phone} />
+        </div>
+
+        <div className="flex items-center gap-3 text-[#003d47]">
+          <EmailIcon />
+          <a href={`mailto:${email}`} className="font-body text-[13px] flex-1 hover:text-[#00b1ca] transition-colors truncate">
+            {email}
+          </a>
+          <CopyButton text={email} />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex flex-col h-[80vh] md:h-[60vh] px-4 py-12 md:p-12 w-full justify-center items-center gap-6"
+      className="relative flex flex-col items-center py-16 gap-10 bg-white overflow-hidden"
     >
-      <h2 className="font-heading underline font-bold text-3xl text-center w-full">Contact</h2>
-      <div className="parents-contact w-full max-w-[1000px] font-body">
-        <div className="flex-col flex gap-4 md:gap-16 justify-between md:flex-row">
-          <div className="flex-1 flex-col border-2 border-[#00B1CA]/50">
-            <div className="bg-[#00B1CA]/10 text-primary p-2 font-semibold border-b-2 border-[#00B1CA]/50">
-              Santosh Patil (Sparsh&apos;s Father)
-            </div>
-            <div className="p-2">
-              <table>
-                <tbody>
-                  <tr className="!h-fit py-2">
-                    <td className="w-16">Phone</td>
-                    <td className="flex items-center justify-start gap-3">
-                      <a className="inline" href="tel:8652860101">
-                        +91 8652860101
-                      </a>
-                      <span
-                        className="inline cursor-pointer"
-                        title="Copy phone to clipboard"
-                        onClick={() => navigator.clipboard.writeText(FATHER_PHONE)}
-                      >
-                        <CopyIcon />
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Email</td>
-                    <td className="flex items-center justify-start gap-3">
-                      <a className="underline" href="mailto:Santosh1976patil@gmail.com">
-                        Santosh1976patil@gmail.com
-                      </a>
-                      <span
-                        className="inline cursor-pointer"
-                        title="Copy email to clipboard"
-                        onClick={() => navigator.clipboard.writeText(FATHER_EMAIL)}
-                      >
-                        <CopyIcon />
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div className="flex-1 flex-col border-2 border-[#00B1CA]/50">
-            <div className="bg-[#00B1CA]/10 text-primary p-2 font-semibold border-b-2 border-[#00B1CA]/50">
-              Pallavi Patil (Sparsh&apos;s Mother)
-            </div>
-            <div className="p-2">
-              <table>
-                <tbody>
-                  <tr>
-                    <td className="w-16">Phone</td>
-                    <td className="flex items-center justify-start gap-3">
-                      <a className="inline" href="tel:8087760007">
-                        +91 8087760007
-                      </a>
-                      <span
-                        className="inline cursor-pointer"
-                        title="Copy phone number to clipboard"
-                        onClick={() => navigator.clipboard.writeText(MOTHER_PHONE)}
-                      >
-                        <CopyIcon />
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Email</td>
-                    <td className="flex items-center justify-start gap-3">
-                      <a href="mailto:Pallu8283patil@gmail.com" className="underline">
-                        Pallu8283patil@gmail.com
-                      </a>
-                      <span
-                        className="inline cursor-pointer"
-                        title="Copy email to clipboard"
-                        onClick={() => navigator.clipboard.writeText(MOTHER_EMAIL)}
-                      >
-                        <CopyIcon />
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <span
+        className="absolute top-0 right-2 font-heading font-bold text-[#00b1ca] leading-none select-none pointer-events-none"
+        style={{ fontSize: '200px', opacity: 0.035 }}
+      >
+        05
+      </span>
+
+      <div className="w-[90%] z-10">
+        <p className="font-body text-[11px] tracking-[0.3em] uppercase text-[#00b1ca] font-semibold mb-2">
+          Get In Touch
+        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#003d47]">
+          Contact
+        </h2>
+        <div className="w-12 h-[3px] bg-[#00b1ca] mt-3" />
       </div>
-      <p className="font-body">
-        Feel free to reach out to us on our provided contacts regarding any opportunities that you
-        might have for Sparsh
+
+      <div className="w-[90%] z-10 flex flex-col md:flex-row gap-5">
+        <ContactCard
+          name="Santosh Patil"
+          relation="Sparsh's Father"
+          phone={FATHER_PHONE}
+          email={FATHER_EMAIL}
+          phoneHref="8652860101"
+        />
+        <ContactCard
+          name="Pallavi Patil"
+          relation="Sparsh's Mother"
+          phone={MOTHER_PHONE}
+          email={MOTHER_EMAIL}
+          phoneHref="8087760007"
+        />
+      </div>
+
+      <p className="font-body text-[13px] text-gray-400 w-[90%] z-10">
+        Feel free to reach out regarding any opportunities for Sparsh.
       </p>
     </section>
   );
