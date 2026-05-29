@@ -1,116 +1,184 @@
 import dynamic from 'next/dynamic';
+import Counter from './Counter';
 
 const RankingChart = dynamic(() => import('./RankingChart'), { ssr: true });
+
+const iconClass = "absolute bottom-2 right-2 w-16 h-16 opacity-[0.08] pointer-events-none transition-all duration-700 ease-out group-hover:opacity-[0.18] group-hover:scale-125 group-hover:-translate-x-1 group-hover:-translate-y-1";
+
+const TournamentIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <circle cx="32" cy="32" r="28" fill="#00b1ca"/>
+    <path d="M10 20 Q32 32 10 44" stroke="white" strokeWidth="4" fill="none"/>
+    <path d="M54 20 Q32 32 54 44" stroke="white" strokeWidth="4" fill="none"/>
+  </svg>
+);
+
+const TrophyIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <path d="M20 8 H44 V34 C44 44 20 44 20 34 Z" fill="#00b1ca"/>
+    <path d="M20 14 H10 C10 14 8 28 20 30" stroke="#00b1ca" strokeWidth="3" fill="none"/>
+    <path d="M44 14 H54 C54 14 56 28 44 30" stroke="#00b1ca" strokeWidth="3" fill="none"/>
+    <rect x="26" y="44" width="12" height="8" fill="#00b1ca"/>
+    <rect x="18" y="52" width="28" height="4" rx="1" fill="#00b1ca"/>
+  </svg>
+);
+
+const MedalIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <path d="M24 8 L32 6 L40 8 L32 28 Z" fill="#00b1ca"/>
+    <circle cx="32" cy="42" r="16" fill="#00b1ca"/>
+    <circle cx="32" cy="42" r="11" stroke="white" strokeWidth="2" fill="none"/>
+    <path d="M32 35 L33.8 40.4 H39.5 L34.9 43.7 L36.6 49.1 L32 45.8 L27.4 49.1 L29.1 43.7 L24.5 40.4 H30.2 Z" fill="white"/>
+  </svg>
+);
+
+const StarIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <path d="M32 6 L38 22 H56 L42 33 L47 50 L32 40 L17 50 L22 33 L8 22 H26 Z" fill="#00b1ca"/>
+  </svg>
+);
+
+const RacketIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <ellipse cx="28" cy="24" rx="18" ry="20" stroke="#00b1ca" strokeWidth="4" fill="none"/>
+    <line x1="18" y1="10" x2="38" y2="38" stroke="#00b1ca" strokeWidth="2"/>
+    <line x1="28" y1="5" x2="28" y2="43" stroke="#00b1ca" strokeWidth="2"/>
+    <line x1="10" y1="24" x2="46" y2="24" stroke="#00b1ca" strokeWidth="2"/>
+    <line x1="38" y1="10" x2="18" y2="38" stroke="#00b1ca" strokeWidth="2"/>
+    <path d="M38 40 L52 56" stroke="#00b1ca" strokeWidth="4" strokeLinecap="round"/>
+  </svg>
+);
+
+const CourtIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={iconClass}>
+    <rect x="6" y="12" width="52" height="40" rx="1" stroke="#00b1ca" strokeWidth="3" fill="none"/>
+    <line x1="32" y1="12" x2="32" y2="52" stroke="#00b1ca" strokeWidth="2"/>
+    <line x1="6" y1="32" x2="58" y2="32" stroke="#00b1ca" strokeWidth="2"/>
+    <line x1="18" y1="12" x2="18" y2="52" stroke="#00b1ca" strokeWidth="1.5"/>
+    <line x1="46" y1="12" x2="46" y2="52" stroke="#00b1ca" strokeWidth="1.5"/>
+    <circle cx="32" cy="32" r="6" stroke="#00b1ca" strokeWidth="2" fill="none"/>
+  </svg>
+);
+
+const stats = [
+  { count: 40, label: 'Tournaments', sub: 'participated', Icon: TournamentIcon },
+  { count: 16, label: 'Winner', sub: 'trophies', Icon: TrophyIcon },
+  { count: 11, label: 'Runner-up', sub: 'trophies', Icon: MedalIcon },
+  { count: 5, label: 'Bronze', sub: 'medals', Icon: MedalIcon },
+  { count: 11, label: 'Semi-', sub: 'finalist', Icon: StarIcon },
+  { count: null, display: '4/7', label: 'Doubles', sub: 'wins', Icon: CourtIcon },
+];
 
 export default function RecordSection() {
   return (
     <section
       id="record"
-      className="flex flex-col justify-start items-center py-12 gap-4 min-h-screen md:h-screen"
+      className="relative flex flex-col items-center py-16 gap-10 min-h-screen bg-white overflow-hidden"
     >
-      <h2 className="font-heading underline text-3xl font-bold text-center w-[90%]">
-        Sparsh&apos;s Past 3 years on the court
-      </h2>
-      <div className="flex flex-col md:flex-row justify-center items-center w-[90%] h-[80%] py-4 gap-8">
-        <div className="left flex-1 h-full">
-          <div className="grid grid-cols-2 grid-rows-4 gap-2 w-full h-full">
-            {/* AITA Ranking */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">#7</div>
-              <div className="text text-lg font-semibold text-left z-10">AITA Under 14 <span className="text-sm font-normal text-gray-400">(May 2026)</span></div>
-            </div>
+      {/* Watermark */}
+      <span
+        className="absolute top-0 right-2 font-heading font-bold text-[#00b1ca] leading-none select-none pointer-events-none"
+        style={{ fontSize: '200px', opacity: 0.035 }}
+      >
+        03
+      </span>
 
-            {/* ATF Ranking */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">#34</div>
-              <div className="text text-lg font-semibold text-left z-10">ATF Ranking <span className="text-sm font-normal text-gray-400">(May 2026)</span></div>
-            </div>
-            {/* Tournaments */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">40</div>
-              <div className="text text-lg font-semibold z-10 text-left">
-                Tournaments participated
+      {/* Header */}
+      <div className="w-[90%] z-10">
+        <p className="font-body text-[11px] tracking-[0.3em] uppercase text-[#00b1ca] font-semibold mb-2">
+          Performance Record
+        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#003d47]">
+          3 Years on the Court
+        </h2>
+        <div className="w-12 h-[3px] bg-[#00b1ca] mt-3" />
+      </div>
+
+      {/* Main layout */}
+      <div className="flex flex-col md:flex-row items-stretch w-[90%] gap-6 z-10">
+
+        {/* Stats column */}
+        <div className="flex-1 flex flex-col gap-3">
+
+          {/* Featured ranking cards */}
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-[#003d47] p-6 flex flex-col justify-between relative overflow-hidden" style={{ minHeight: '148px' }}>
+              <div
+                className="absolute -top-8 -right-8 w-28 h-28 rounded-full"
+                style={{ background: 'radial-gradient(circle, rgba(0,177,202,0.18) 0%, transparent 70%)' }}
+              />
+              {/* Racket watermark */}
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute -bottom-4 -right-4 w-28 h-28 opacity-[0.06] pointer-events-none rotate-[25deg]">
+                <ellipse cx="28" cy="24" rx="18" ry="20" stroke="#00b1ca" strokeWidth="4" fill="none"/>
+                <line x1="18" y1="10" x2="38" y2="38" stroke="#00b1ca" strokeWidth="2"/>
+                <line x1="28" y1="5" x2="28" y2="43" stroke="#00b1ca" strokeWidth="2"/>
+                <line x1="10" y1="24" x2="46" y2="24" stroke="#00b1ca" strokeWidth="2"/>
+                <line x1="38" y1="10" x2="18" y2="38" stroke="#00b1ca" strokeWidth="2"/>
+                <path d="M38 40 L52 56" stroke="#00b1ca" strokeWidth="4" strokeLinecap="round"/>
+              </svg>
+              <span className="font-body text-[9px] tracking-[0.28em] uppercase text-[#00b1ca]/60 font-semibold">
+                AITA Under 14
+              </span>
+              <div>
+                <div className="font-heading font-bold text-[#00b1ca] leading-none" style={{ fontSize: '64px' }}>
+                  #<Counter to={7} duration={600} />
+                </div>
+                <div className="font-body text-[11px] text-white/30 mt-0.5">India · May 2026</div>
               </div>
-              <svg
-                viewBox="0 0 512 512"
-                xmlSpace="preserve"
-                fill="#fff"
-                className="absolute bottom-2 -right-4 md:right-1 w-48 h-48 z-0 fill-[#fff]/40"
-              >
-                <g>
-                  <path
-                    className="st0"
-                    d="M386.386,313.5c-12.187-27.904-21.226-60.357-24.932-95.871c0.347-17.457-2.033-35.289-7.086-52.89 c-9.623-33.542-28.849-66.349-57.256-94.762c-18.722-18.716-39.213-34.134-60.683-45.729c-16.111-8.692-32.774-15.234-49.66-19.328 c-25.306-6.142-51.196-6.747-75.904-0.612C86.164,10.402,62.811,23.344,43.102,43.1c-17.559,17.526-29.746,37.907-36.5,59.582 c-5.08,16.247-7.141,33.18-6.481,50.155c0.992,25.49,8.018,51.067,19.96,75.489c11.956,24.422,28.842,47.722,49.897,68.784 c37.881,37.867,83.582,59.44,128.399,63.648c7.352,0.688,14.676,0.864,21.94,0.599c37.547,2.53,68.946,11.405,95.422,23.633 c15.839,7.324,29.923,15.88,42.416,25.054l67.172-33.229C411.039,360.229,397.404,338.759,386.386,313.5z M250.989,315.65 c-22.518,7.494-48.585,7.8-75.19,0.163c-26.578-7.616-53.576-23.177-77.461-47.062c-16.152-16.144-29.21-33.609-38.799-51.38 c-7.195-13.323-12.432-26.816-15.642-40.05c-4.808-19.872-5.06-39.07-0.66-56.807c4.427-17.744,13.397-34.188,28.223-49.054 c13.207-13.187,27.686-21.715,43.192-26.578c11.629-3.638,23.884-5.175,36.636-4.686c19.11,0.728,39.35,6.087,59.412,15.907 c20.05,9.807,39.88,24.062,58.052,42.233c31.862,31.848,48.864,69.219,52.08,103.774c1.619,17.288-0.184,33.854-5.176,48.877 c-5.012,15.03-13.159,28.55-24.632,40.03C279.532,302.49,266.019,310.644,250.989,315.65z M332.571,348.593 c-10.65-4.93-21.708-9.079-33.344-12.521c7.134-4.876,13.894-10.425,20.15-16.696c6.984-6.971,13.058-14.581,18.314-22.633 c3.346,11.275,7.297,22.177,11.936,32.807c6.345,14.506,13.458,28.019,21.17,40.424 C359.163,362.248,346.452,355.012,332.571,348.593z"
-                  ></path>
-                  <path
-                    className="st0"
-                    d="M438.821,391.022l-64.526,31.917c3.686,3.203,7.208,6.434,10.562,9.691c1.02,0.992,2.04,1.999,3.06,3.02 c1.591,1.591,3.19,3.223,4.774,4.876l65.124-32.209C451.416,402.815,444.928,396.96,438.821,391.022z"
-                  ></path>
-                  <path
-                    className="st0"
-                    d="M508.495,451.693l-75.231,37.214c1.136,1.51,2.17,2.904,3.068,4.114c1.4,1.898,2.489,3.4,3.223,4.414 c0.368,0.51,0.639,0.898,0.816,1.15l0.198,0.272l0.04,0.062l0.007,0.007l0.074,0.102l0.075,0.102 c0.972,1.346,2.047,2.605,3.203,3.761c5.183,5.182,12.072,8.406,19.485,9.011l0.074,0.006c9.039,0.7,17.968-2.57,24.428-9.018 l14.935-14.934c6.447-6.447,9.725-15.39,9.011-24.449v-0.014C511.569,459.316,510.379,455.324,508.495,451.693z"
-                  ></path>
-                  <path
-                    className="st0"
-                    d="M476.986,424.081c-1.102-0.863-2.244-1.781-3.387-2.693l-67.797,33.534 c5.692,6.523,11.044,12.99,15.758,18.893l73.197-36.207C490.867,434.759,484.535,430.039,476.986,424.081z"
-                  ></path>
-                  <path
-                    className="st0"
-                    d="M185.858,431.739c-16.996,16.07-17.757,42.886-1.694,59.888c16.07,17.009,42.886,17.764,59.888,1.694 c17.009-16.07,17.764-42.879,1.694-59.888C229.682,416.431,202.866,415.676,185.858,431.739z"
-                  ></path>
-                </g>
+            </div>
+
+            <div className="bg-[#003d47] p-6 flex flex-col justify-between relative overflow-hidden" style={{ minHeight: '148px' }}>
+              <div
+                className="absolute -top-8 -right-8 w-28 h-28 rounded-full"
+                style={{ background: 'radial-gradient(circle, rgba(0,177,202,0.18) 0%, transparent 70%)' }}
+              />
+              {/* Globe/ATF watermark */}
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute -bottom-4 -right-4 w-28 h-28 opacity-[0.06] pointer-events-none">
+                <circle cx="32" cy="32" r="24" stroke="#00b1ca" strokeWidth="3" fill="none"/>
+                <ellipse cx="32" cy="32" rx="12" ry="24" stroke="#00b1ca" strokeWidth="2" fill="none"/>
+                <line x1="8" y1="32" x2="56" y2="32" stroke="#00b1ca" strokeWidth="2"/>
+                <line x1="14" y1="18" x2="50" y2="18" stroke="#00b1ca" strokeWidth="1.5"/>
+                <line x1="14" y1="46" x2="50" y2="46" stroke="#00b1ca" strokeWidth="1.5"/>
               </svg>
-            </div>
-
-            {/* Winner Trophies */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">16</div>
-              <div className="text text-lg font-semibold z-10 text-left">Winner Trophies</div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                className="absolute bottom-2 -right-8 md:right-1 w-48 h-48 z-0 fill-[#fff]/40"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M11 4.99612C11 4.59166 10.7564 4.22702 10.3827 4.07224C10.009 3.91746 9.57889 4.00302 9.29289 4.28902L8.29289 5.28902C7.90237 5.67954 7.90237 6.31271 8.29289 6.70323C8.48816 6.89849 8.74408 6.99612 9 6.99612V9.99612C8.44772 9.99612 8 10.4438 8 10.9961C8 11.5484 8.44772 11.9961 9 11.9961H9.9986C9.99907 11.9961 9.99953 11.9961 10 11.9961C10.0005 11.9961 10.0009 11.9961 10.0014 11.9961H11C11.5523 11.9961 12 11.5484 12 10.9961C12 10.4438 11.5523 9.99612 11 9.99612V4.99612Z"
-                  fill="white"
-                  fillOpacity="0.4"
-                />
-              </svg>
-            </div>
-
-            {/* Runner up trophies */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading z-10 text-left">11</div>
-              <div className="text text-lg font-semibold z-10 text-left">Runner up trophies</div>
-            </div>
-
-            {/* Bronze medals */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">5</div>
-              <div className="text text-lg font-semibold text-left z-10">Bronze medals</div>
-            </div>
-
-            {/* Semifinalist */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">11</div>
-              <div className="text text-lg font-semibold text-left z-10">Times Semifinalist</div>
-            </div>
-
-            {/* Doubles wins */}
-            <div className="text-center w-full h-full flex flex-col justify-center text-primary bg-[#00B1CA]/15 relative overflow-hidden p-8">
-              <div className="count text-5xl font-bold font-heading text-left z-10">4/7</div>
-              <div className="text text-lg font-semibold text-left z-10">Wins in Doubles</div>
+              <span className="font-body text-[9px] tracking-[0.28em] uppercase text-[#00b1ca]/60 font-semibold">
+                ATF Asia
+              </span>
+              <div>
+                <div className="font-heading font-bold text-[#00b1ca] leading-none" style={{ fontSize: '64px' }}>
+                  #<Counter to={34} duration={600} />
+                </div>
+                <div className="font-body text-[11px] text-white/30 mt-0.5">Asia · May 2026</div>
+              </div>
             </div>
           </div>
+
+          {/* Secondary stat cards */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {stats.map((stat) => (
+              <div
+                key={stat.label + stat.sub}
+                className="bg-white border border-gray-100 p-4 flex flex-col gap-2 relative overflow-hidden group hover:border-[#00b1ca]/40 transition-colors"
+                style={{ borderLeft: '3px solid #00b1ca', minHeight: '100px' }}
+              >
+                <stat.Icon />
+                <div className="font-heading font-bold text-[#003d47] leading-none" style={{ fontSize: '40px' }}>
+                  {stat.count !== null ? <Counter to={stat.count!} duration={600} /> : stat.display}
+                </div>
+                <div className="font-body text-[11px] uppercase tracking-[0.15em] text-gray-400 leading-tight">
+                  {stat.label}
+                  <br />
+                  <span className="normal-case tracking-normal text-gray-500">{stat.sub}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="right flex-1 w-full h-full flex flex-col justify-center items-center">
+
+        {/* Chart column */}
+        <div className="flex-1" style={{ minHeight: '440px' }}>
           <RankingChart />
         </div>
+
       </div>
     </section>
   );
