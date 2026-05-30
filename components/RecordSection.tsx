@@ -144,10 +144,10 @@ export default function RecordSection() {
                 ATF Asia
               </span>
               <div>
-                <div className="font-heading font-bold text-[#00b1ca] leading-none" style={{ fontSize: '64px' }}>
-                  #<Counter to={34} duration={600} />
+                <div className="font-heading font-bold text-[#00b1ca] leading-none" style={{ fontSize: '64px' }} title="As of 31st May 2026">
+                  #<Counter to={33} duration={600} />
                 </div>
-                <div className="font-body text-[11px] text-white/30 mt-0.5">Asia · May 2026</div>
+                <div className="font-body text-[11px] text-white/30 mt-0.5">Asia · 31 May 2026</div>
               </div>
             </div>
           </div>

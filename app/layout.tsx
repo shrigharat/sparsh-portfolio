@@ -16,10 +16,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
+  title: 'Sparsh Patil | AITA #7 & ATF #33 Rising Tennis Star',
   authors: [{ name: 'Sparsh Patil' }],
   description:
-    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
+    'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #33, he brings unparalleled energy, skill, and focus to every match.',
   keywords: [
     'Sparsh Patil',
     'Tennis',
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
     'junior tennis India',
   ],
   openGraph: {
-    title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
+    title: 'Sparsh Patil | AITA #7 & ATF #33 Rising Tennis Star',
     url: 'https://sparshpatil.com/',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #33, he brings unparalleled energy, skill, and focus to every match.',
     images: [{ url: 'https://sparshpatil.com/assets/sparsh-banner-meta.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sparsh Patil | AITA #7 & ATF #34 Rising Tennis Star',
+    title: 'Sparsh Patil | AITA #7 & ATF #33 Rising Tennis Star',
     description:
-      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #34, he brings unparalleled energy, skill, and focus to every match.',
+      'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #7 (Under 14) and ATF #33, he brings unparalleled energy, skill, and focus to every match.',
     images: ['https://sparshpatil.com/assets/sparsh-banner-meta.webp'],
   },
   robots: 'index',

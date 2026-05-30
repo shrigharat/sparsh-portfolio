@@ -46,11 +46,11 @@ export default function AboutSection() {
             </div>
             <div className="w-px bg-gray-200" />
             <div>
-              <p className="font-heading font-bold text-4xl text-[#003d47] leading-none">#34</p>
+              <p className="font-heading font-bold text-4xl text-[#003d47] leading-none" title="As of 31st May 2026">#33</p>
               <p className="font-body text-[11px] text-gray-500 leading-tight mt-1">
                 ATF · Asia
                 <br />
-                May 2026
+                31 May 2026
               </p>
             </div>
           </div>
