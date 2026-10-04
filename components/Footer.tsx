@@ -46,7 +46,7 @@ export default function Footer() {
               <div className="w-8 h-[2px] mt-2" style={{ backgroundColor: '#00b1ca' }} />
             </div>
             <p className="font-body text-sm leading-relaxed text-white/45">
-              Rising tennis star from Navi Mumbai. AITA U14 #7 · ATF #33.
+              Rising tennis star from Navi Mumbai. AITA U14 #4 · ATF #33.
             </p>
             <a
               href="https://www.instagram.com/sparsh_onserve/"
@@ -146,7 +146,9 @@ export default function Footer() {
           <p className="font-body text-[12px] text-white/25">
             © 2026 Sparsh Patil. All rights reserved.
           </p>
-          <p className="font-body text-[12px] text-white/20" title="As of 31st May 2026">AITA U14 #7 · ATF #33 · 31 May 2026</p>
+          <p className="font-body text-[12px] text-white/20" title="As of 31st May 2026">
+            AITA U14 #4 · ATF #33 · 31 May 2026
+          </p>
         </div>
       </div>
     </footer>

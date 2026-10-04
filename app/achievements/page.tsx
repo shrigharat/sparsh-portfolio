@@ -7,7 +7,7 @@ import { data } from '@/lib/achievements';
 const STATS = [
   { value: '40', label: 'Tournaments' },
   { value: '16', label: 'Winner Trophies' },
-  { value: '#7', label: 'AITA U14' },
+  { value: '#4', label: 'AITA U14' },
   { value: '#33', label: 'ATF Ranking' },
 ];
 
@@ -40,23 +40,23 @@ function ResultBadge({ result }: { result: string }) {
 }
 
 export const metadata: Metadata = {
-  title: 'Sparsh Patil | Achievements — AITA #7 & ATF #33',
+  title: 'Sparsh Patil | Achievements — AITA #4 & ATF #33',
   description:
-    'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
+    'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #4 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
   keywords: 'Sparsh Patil,Tennis,Young talent,Panvel,AITA,ATF,Under 14,ranking,junior tennis India',
   authors: [{ name: 'Sparsh Patil' }],
   openGraph: {
-    title: 'Sparsh Patil | Achievements — AITA #7 & ATF #33',
+    title: 'Sparsh Patil | Achievements — AITA #4 & ATF #33',
     url: 'https://sparshpatil.com/achievements/',
     description:
-      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
+      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #4 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
     images: [{ url: 'https://sparshpatil.com/assets/sparsh-profile-meta.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sparsh Patil | Achievements — AITA #7 & ATF #33',
+    title: 'Sparsh Patil | Achievements — AITA #4 & ATF #33',
     description:
-      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #7 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
+      'Tournament achievements of Sparsh Santosh Patil — AITA Under 14 #4 and ATF #33 ranked junior tennis player from Navi Mumbai. Singles and doubles titles across AITA, MSLTA, and Asian tournaments.',
     images: ['https://sparshpatil.com/assets/sparsh-profile-meta.jpeg'],
   },
 };
@@ -65,15 +65,29 @@ export default function AchievementsPage() {
   return (
     <>
       {/* Top nav bar */}
-      <header style={{ backgroundColor: '#003d47' }} className="w-full px-6 md:px-12 py-4 flex items-center justify-between">
-        <Link href="/" className="font-heading font-bold text-white tracking-widest text-sm md:text-base">
+      <header
+        style={{ backgroundColor: '#003d47' }}
+        className="w-full px-6 md:px-12 py-4 flex items-center justify-between"
+      >
+        <Link
+          href="/"
+          className="font-heading font-bold text-white tracking-widest text-sm md:text-base"
+        >
           SPARSH PATIL
         </Link>
         <Link
           href="/"
           className="font-body text-sm text-white/60 hover:text-white transition-colors flex items-center gap-1.5"
         >
-          <svg viewBox="0 0 24 24" width="14" height="14" className="fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            viewBox="0 0 24 24"
+            width="14"
+            height="14"
+            className="fill-none stroke-current"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M19 12H5M5 12l7-7M5 12l7 7" />
           </svg>
           Home
@@ -96,9 +110,17 @@ export default function AchievementsPage() {
           {/* Stats row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
             {STATS.map(({ value, label }) => (
-              <div key={label} className="border border-white/10 px-5 py-4" title="As of 31st May 2026">
-                <p className="font-heading font-bold text-3xl md:text-4xl text-white leading-none">{value}</p>
-                <p className="font-body text-[11px] tracking-widest uppercase text-white/40 mt-1.5">{label}</p>
+              <div
+                key={label}
+                className="border border-white/10 px-5 py-4"
+                title="As of 31st May 2026"
+              >
+                <p className="font-heading font-bold text-3xl md:text-4xl text-white leading-none">
+                  {value}
+                </p>
+                <p className="font-body text-[11px] tracking-widest uppercase text-white/40 mt-1.5">
+                  {label}
+                </p>
               </div>
             ))}
           </div>
@@ -170,7 +192,9 @@ export default function AchievementsPage() {
                         : 'polygon(0 24px, 100% 0%, 100% 100%, 0% 100%)',
                     }}
                   >
-                    <div className={`bg-[#00b1ca] flex-shrink-0 ${isLarge ? 'w-10 h-[3px]' : 'w-6 h-[2px]'}`} />
+                    <div
+                      className={`bg-[#00b1ca] flex-shrink-0 ${isLarge ? 'w-10 h-[3px]' : 'w-6 h-[2px]'}`}
+                    />
 
                     <div className="flex flex-wrap gap-1">
                       {achievement.results.map((result, i) => (
@@ -178,7 +202,9 @@ export default function AchievementsPage() {
                       ))}
                     </div>
 
-                    <p className={`text-gray-500 leading-snug ${isLarge ? 'text-xs md:text-sm' : 'text-[11px]'}`}>
+                    <p
+                      className={`text-gray-500 leading-snug ${isLarge ? 'text-xs md:text-sm' : 'text-[11px]'}`}
+                    >
                       {achievement.description.split('\n').map((line, i, arr) => (
                         <span key={i}>
                           {line}
@@ -189,7 +215,9 @@ export default function AchievementsPage() {
                       ))}
                     </p>
 
-                    <div className={`text-[#00b1ca] font-semibold tracking-widest uppercase flex-shrink-0 ${isLarge ? 'text-[10px] md:text-[11px]' : 'text-[9px]'}`}>
+                    <div
+                      className={`text-[#00b1ca] font-semibold tracking-widest uppercase flex-shrink-0 ${isLarge ? 'text-[10px] md:text-[11px]' : 'text-[9px]'}`}
+                    >
                       {achievement.date}
                     </div>
                   </div>

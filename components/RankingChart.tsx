@@ -5,10 +5,36 @@ import type ApexCharts from 'apexcharts';
 import type { ApexOptions } from 'apexcharts';
 
 const UNDER_12_DATA = [491, 317, 168, 194, 231, 194, 94, 48, 35, 35, 35];
-const UNDER_14_DATA = [330, 181, 217, 114, 117, 78, 46, 14, 11, 7, 7];
+const UNDER_14_DATA = [330, 181, 217, 114, 117, 78, 46, 14, 11, 7, 7, 6, 4];
 
-const U12_MONTHS = ["Feb '23","Apr '23","Jun '23","Aug '23","Oct '23","Dec '23","Feb '24","Apr '24","May '24","Jun '24","Jul '24"];
-const U14_MONTHS = ["Nov '24","Jan '25","Mar '25","May '25","Jul '25","Sep '25","Nov '25","Jan '26","Feb '26","Apr '26","May '26"];
+const U12_MONTHS = [
+  "Feb '23",
+  "Apr '23",
+  "Jun '23",
+  "Aug '23",
+  "Oct '23",
+  "Dec '23",
+  "Feb '24",
+  "Apr '24",
+  "May '24",
+  "Jun '24",
+  "Jul '24",
+];
+const U14_MONTHS = [
+  "Nov '24",
+  "Jan '25",
+  "Mar '25",
+  "May '25",
+  "Jul '25",
+  "Sep '25",
+  "Nov '25",
+  "Jan '26",
+  "Feb '26",
+  "Apr '26",
+  "May '26",
+  "Jul '26",
+  "Sep '26",
+];
 
 function buildOptions(data: number[], categories: string[]): ApexOptions {
   return {
@@ -58,7 +84,11 @@ function buildOptions(data: number[], categories: string[]): ApexOptions {
     xaxis: {
       categories,
       labels: {
-        style: { colors: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-dm-sans)', fontSize: '11px' },
+        style: {
+          colors: 'rgba(255,255,255,0.35)',
+          fontFamily: 'var(--font-dm-sans)',
+          fontSize: '11px',
+        },
       },
       axisBorder: { color: 'rgba(255,255,255,0.08)' },
       axisTicks: { color: 'rgba(255,255,255,0.08)' },
@@ -67,7 +97,11 @@ function buildOptions(data: number[], categories: string[]): ApexOptions {
       reversed: true,
       min: 1,
       labels: {
-        style: { colors: 'rgba(255,255,255,0.35)', fontFamily: 'var(--font-dm-sans)', fontSize: '11px' },
+        style: {
+          colors: 'rgba(255,255,255,0.35)',
+          fontFamily: 'var(--font-dm-sans)',
+          fontSize: '11px',
+        },
         formatter: (val: number) => `#${Math.round(val)}`,
       },
     },
@@ -93,15 +127,23 @@ export default function RankingChart() {
       const ApexChartsLib = (await import('apexcharts')).default;
       if (!mounted) return;
       if (active === 'u14' && u14Ref.current && !u14Chart.current) {
-        u14Chart.current = new ApexChartsLib(u14Ref.current, buildOptions(UNDER_14_DATA, U14_MONTHS));
+        u14Chart.current = new ApexChartsLib(
+          u14Ref.current,
+          buildOptions(UNDER_14_DATA, U14_MONTHS),
+        );
         u14Chart.current.render();
       } else if (active === 'u12' && u12Ref.current && !u12Chart.current) {
-        u12Chart.current = new ApexChartsLib(u12Ref.current, buildOptions(UNDER_12_DATA, U12_MONTHS));
+        u12Chart.current = new ApexChartsLib(
+          u12Ref.current,
+          buildOptions(UNDER_12_DATA, U12_MONTHS),
+        );
         u12Chart.current.render();
       }
     };
     init();
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, [active]);
 
   useEffect(() => {
@@ -113,7 +155,7 @@ export default function RankingChart() {
     };
   }, []);
 
-  const bestRank = active === 'u14' ? '#7' : '#35';
+  const bestRank = active === 'u14' ? '#4' : '#35';
   const subtitle = active === 'u14' ? 'Nov 2024 – May 2026' : 'Feb 2023 – Jul 2024';
 
   return (
@@ -133,8 +175,12 @@ export default function RankingChart() {
           <p className="font-body text-[11px] text-white/25 mt-0.5">{subtitle}</p>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <span className="font-body text-[9px] tracking-[0.2em] uppercase text-white/30">Peak Rank</span>
-          <span className="font-heading font-bold text-[#00b1ca] text-2xl leading-none">{bestRank}</span>
+          <span className="font-body text-[9px] tracking-[0.2em] uppercase text-white/30">
+            Peak Rank
+          </span>
+          <span className="font-heading font-bold text-[#00b1ca] text-2xl leading-none">
+            {bestRank}
+          </span>
         </div>
       </div>
 

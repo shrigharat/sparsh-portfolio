@@ -37,7 +37,7 @@ export default function AboutSection() {
           </p>
           <div className="flex gap-6">
             <div>
-              <p className="font-heading font-bold text-4xl text-[#003d47] leading-none">#7</p>
+              <p className="font-heading font-bold text-4xl text-[#003d47] leading-none">#4</p>
               <p className="font-body text-[11px] text-gray-500 leading-tight mt-1">
                 AITA · Under 14
                 <br />
@@ -46,7 +46,12 @@ export default function AboutSection() {
             </div>
             <div className="w-px bg-gray-200" />
             <div>
-              <p className="font-heading font-bold text-4xl text-[#003d47] leading-none" title="As of 31st May 2026">#33</p>
+              <p
+                className="font-heading font-bold text-4xl text-[#003d47] leading-none"
+                title="As of 31st May 2026"
+              >
+                #33
+              </p>
               <p className="font-body text-[11px] text-gray-500 leading-tight mt-1">
                 ATF · Asia
                 <br />
@@ -69,7 +74,14 @@ export default function AboutSection() {
           <div className="ball-translate">
             {/* Squish layer — flattens at impact, origin at bottom */}
             <div className="ball-squish">
-              <svg className="tennis-ball-svg" width="52" height="52" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="tennis-ball-svg"
+                width="52"
+                height="52"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <circle cx="50" cy="50" r="48" fill="#c8e63c" />
                 <path d="M 14 18 Q 50 50 14 82" stroke="white" strokeWidth="5.5" fill="none" />
                 <path d="M 86 18 Q 50 50 86 82" stroke="white" strokeWidth="5.5" fill="none" />
