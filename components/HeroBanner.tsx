@@ -1,15 +1,6 @@
 import Image from 'next/image';
-import { data } from '@/lib/achievements';
-
-// Latest result, derived from the newest achievement so the hero never goes stale
-const latest = data[0];
-const latestEvent = latest.description.split('\n').pop();
-const latestResult = latest.results[0].replace(/\s*\p{Extended_Pictographic}/gu, '');
-
-const rankings = [
-  { value: '#4', label: 'AITA · Under 14', sub: 'India · May 2026' },
-  { value: '#33', label: 'ATF', sub: 'Asia · May 2026' },
-];
+import { latestResult } from '@/lib/achievements';
+import { rankings } from '@/lib/record';
 
 export default function HeroBanner() {
   return (
@@ -49,7 +40,7 @@ export default function HeroBanner() {
             </span>
             <span className="text-white/60 shrink-0">Latest</span>
             <span className="text-white truncate group-hover:text-[#dfff4f] transition-colors">
-              {latestResult} — {latestEvent}
+              {latestResult.result} — {latestResult.event}
             </span>
           </a>
 
@@ -89,7 +80,7 @@ export default function HeroBanner() {
             {rankings.map((r) => (
               <div key={r.label}>
                 <p className="font-heading font-bold text-4xl md:text-5xl leading-none text-[#dfff4f]">
-                  {r.value}
+                  #{r.value}
                 </p>
                 <p className="font-body text-[11px] uppercase tracking-[0.15em] text-white/70 mt-2 whitespace-nowrap">
                   {r.label}

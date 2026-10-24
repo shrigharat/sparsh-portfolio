@@ -37,14 +37,21 @@ export const metadata: Metadata = {
     url: 'https://sparshpatil.com/',
     description:
       'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #4 (Under 14) and ATF #33, he brings unparalleled energy, skill, and focus to every match.',
-    images: [{ url: 'https://sparshpatil.com/assets/sparsh-banner-meta.webp' }],
+    images: [
+      {
+        url: 'https://sparshpatil.com/assets/og-image-banner.png',
+        width: 2400,
+        height: 1260,
+        alt: 'Sparsh Patil — AITA #4 Under 14, ATF #33',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sparsh Patil | AITA #4 & ATF #33 Rising Tennis Star',
     description:
       'Sparsh Santosh Patil, a 13-year-old rising tennis player from Navi Mumbai. Ranked AITA #4 (Under 14) and ATF #33, he brings unparalleled energy, skill, and focus to every match.',
-    images: ['https://sparshpatil.com/assets/sparsh-banner-meta.webp'],
+    images: ['https://sparshpatil.com/assets/og-image-banner.png'],
   },
   robots: 'index',
 };

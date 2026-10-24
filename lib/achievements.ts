@@ -140,3 +140,9 @@ export const data: Achievement[] = [
     description: 'Under 15 Mumbai Soft Tennis National Selection - Satara',
   },
 ];
+
+// Newest result for "Latest" callouts, e.g. "Doubles, Runner up — Fenesta Nationals Tennis Tournament, Delhi"
+export const latestResult = {
+  result: data[0].results[0].replace(/\s*\p{Extended_Pictographic}/gu, ''),
+  event: data[0].description.split('\n').pop(),
+};

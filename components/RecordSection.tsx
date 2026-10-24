@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Counter from './Counter';
+import { rankings, stats as record } from '@/lib/record';
 
 const RankingChart = dynamic(() => import('./RankingChart'), { ssr: true });
 
@@ -65,12 +66,12 @@ const CourtIcon = () => (
 );
 
 const stats = [
-  { count: 43, label: 'Tournaments', sub: 'participated', Icon: TournamentIcon },
-  { count: 17, label: 'Winner', sub: 'trophies', Icon: TrophyIcon },
-  { count: 13, label: 'Runner-up', sub: 'trophies', Icon: MedalIcon },
-  { count: 5, label: 'Bronze', sub: 'medals', Icon: MedalIcon },
-  { count: 11, label: 'Semi-', sub: 'finalist', Icon: StarIcon },
-  { count: null, display: '5/9', label: 'Doubles', sub: 'wins', Icon: CourtIcon },
+  { count: record.tournaments, label: 'Tournaments', sub: 'participated', Icon: TournamentIcon },
+  { count: record.winner, label: 'Winner', sub: 'trophies', Icon: TrophyIcon },
+  { count: record.runnerUp, label: 'Runner-up', sub: 'trophies', Icon: MedalIcon },
+  { count: record.bronze, label: 'Bronze', sub: 'medals', Icon: MedalIcon },
+  { count: record.semifinalist, label: 'Semi-', sub: 'finalist', Icon: StarIcon },
+  { count: null, display: record.doubles, label: 'Doubles', sub: 'wins', Icon: CourtIcon },
 ];
 
 export default function RecordSection() {
@@ -144,7 +145,7 @@ export default function RecordSection() {
                   className="font-heading font-bold text-[#00b1ca] leading-none"
                   style={{ fontSize: '64px' }}
                 >
-                  #<Counter to={4} duration={600} />
+                  #<Counter to={rankings[0].value} duration={600} />
                 </div>
                 <div className="font-body text-[11px] text-white/30 mt-0.5">India · May 2026</div>
               </div>
@@ -190,7 +191,7 @@ export default function RecordSection() {
                   style={{ fontSize: '64px' }}
                   title="As of 31st May 2026"
                 >
-                  #<Counter to={33} duration={600} />
+                  #<Counter to={rankings[1].value} duration={600} />
                 </div>
                 <div className="font-body text-[11px] text-white/30 mt-0.5">Asia · 31 May 2026</div>
               </div>
