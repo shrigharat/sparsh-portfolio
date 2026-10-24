@@ -41,37 +41,6 @@ a {
   background-size: 20px 20px;
 }
 
-#nav-header.open {
-  width: 100%;
-  max-width: calc(100% - 2rem);
-  display: flex;
-  justify-content: flex-end;
-  box-shadow: 0 0.25rem 1rem 0.25rem rgba(112, 144, 176, 0.25);
-}
-
-#nav-header.open nav {
-  width: 100%;
-  display: flex;
-}
-
-#nav-header.open nav ul {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  gap: 16px;
-  width: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#nav-header.open nav ul li a {
-  text-decoration: underline;
-  color: black !important;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
 .active-ranking-graph-button {
   background-color: var(--primary);
   color: white;
@@ -131,4 +100,34 @@ a {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ---------- Hero ---------- */
+@media (min-width: 768px) {
+  .hero-photo {
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-line {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes hero-photo {
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.hero-rise { animation: hero-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) var(--d, 0ms) both; }
+.hero-line { animation: hero-line 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) var(--d, 0ms) both; }
+.hero-photo img { animation: hero-photo 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise, .hero-line, .hero-photo img { animation: none; }
 }
