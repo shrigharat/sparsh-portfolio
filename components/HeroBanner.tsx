@@ -15,25 +15,25 @@ export default function HeroBanner() {
   return (
     <section
       id="hero-banner"
-      className="hero relative min-h-[100svh] bg-[#003d47] text-white overflow-hidden flex"
+      className="hero relative min-h-[100svh] bg-[#003d47] text-white overflow-hidden flex flex-col md:flex-row"
     >
-      {/* Photo — full-bleed on mobile, slanted right panel on desktop */}
-      <div className="hero-photo absolute inset-x-0 top-0 h-[50%] md:h-full md:left-auto md:w-[48%]">
+      {/* Photo — fills the space above the content on mobile, slanted right panel on desktop */}
+      <div className="hero-photo relative flex-1 min-h-[34svh] md:absolute md:inset-y-0 md:right-0 md:w-[48%]">
         <Image
           src="/assets/banner-2.webp"
-          className="object-cover object-[50%_88%] md:object-[50%_85%]"
+          className="object-cover object-[50%_60%] md:object-[50%_85%]"
           alt="Sparsh on court preparing a forehand"
           fill
           sizes="(min-width: 768px) 48vw, 100vw"
           priority
         />
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,#003d47,rgba(0,61,71,0)_40%),linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0)_25%)] md:hidden" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,#003d47,rgba(0,61,71,0)_35%),linear-gradient(to_bottom,rgba(0,0,0,0.45),rgba(0,0,0,0)_25%)] md:hidden" />
         <div className="hidden md:block absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      <div className="relative z-10 flex flex-col w-full min-w-0 px-5 pt-6 pb-8 md:px-16 md:pt-10 md:pb-12">
-        {/* Top label */}
-        <p className="hero-rise font-body text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase text-white/60 pr-14 md:pr-0 [--d:0ms]">
+      <div className="z-10 flex flex-col md:flex-1 w-full min-w-0 px-5 pb-8 md:relative md:px-16 md:pt-10 md:pb-12">
+        {/* Top label — overlays the photo on mobile */}
+        <p className="hero-rise absolute top-6 left-5 md:static font-body text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase text-white/60 pr-14 md:pr-0 [--d:0ms]">
           ASA Tennis Academy · Navi Mumbai
         </p>
 
