@@ -65,12 +65,12 @@ const CourtIcon = () => (
 );
 
 const stats = [
-  { count: 40, label: 'Tournaments', sub: 'participated', Icon: TournamentIcon },
-  { count: 16, label: 'Winner', sub: 'trophies', Icon: TrophyIcon },
-  { count: 11, label: 'Runner-up', sub: 'trophies', Icon: MedalIcon },
+  { count: 43, label: 'Tournaments', sub: 'participated', Icon: TournamentIcon },
+  { count: 17, label: 'Winner', sub: 'trophies', Icon: TrophyIcon },
+  { count: 13, label: 'Runner-up', sub: 'trophies', Icon: MedalIcon },
   { count: 5, label: 'Bronze', sub: 'medals', Icon: MedalIcon },
   { count: 11, label: 'Semi-', sub: 'finalist', Icon: StarIcon },
-  { count: null, display: '4/7', label: 'Doubles', sub: 'wins', Icon: CourtIcon },
+  { count: null, display: '5/9', label: 'Doubles', sub: 'wins', Icon: CourtIcon },
 ];
 
 export default function RecordSection() {

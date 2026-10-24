@@ -10,12 +10,33 @@ export type Achievement = {
 
 export const data: Achievement[] = [
   {
+    image: '/assets/achievements/doubles-finalist-fenesta-nationals-oct-2026.webp',
+    alt: 'Sparsh with his runner-up trophy in the doubles category at the Fenesta Nationals U-14 Tennis Tournament, Delhi',
+    results: ['Doubles, Runner up 🥈'],
+    date: '10-17th October, 2026',
+    description: 'Under 14\nFenesta Nationals Tennis Tournament, Delhi',
+    isLarge: true,
+  },
+  {
+    image: '/assets/achievements/ns-doubles-winner-jalandhar-aug-2026.webp',
+    alt: 'Sparsh with his trophy for winning the doubles category at the NS Jalandhar U-14 Tennis Tournament, Punjab',
+    results: ['Doubles, Winner 🥇'],
+    date: '24-29th August, 2026',
+    description: 'Under 14\nNS Jalandhar, Punjab Tennis Tournament',
+  },
+  {
+    image: '/assets/achievements/singles-finalist-jassowal-aug-2026.webp',
+    alt: 'Sparsh with his runner-up trophy in the singles category at the Jassowal U-14 Tennis Tournament, Punjab',
+    results: ['Singles, Runner up 🥈'],
+    date: '17-22nd August, 2026',
+    description: 'Under 14\nJassowal, Punjab Tennis Tournament',
+  },
+  {
     image: '/assets/achievements/winner-ns-belagavi-may-2026.webp',
     alt: 'Sparsh receiving trophy for winning the singles and doubles categories at NS Belagavi U-14 Tennis Tournament',
     results: ['Singles, Winner 🥇', 'Doubles, Winner 🥇'],
     date: '18th May, 2026',
     description: 'Under 14\nNS Belagavi, Karnataka Tennis Tournament',
-    isLarge: true,
   },
   {
     image: '/assets/achievements/winner-matunga-cs7-may-26.webp',
